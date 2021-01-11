@@ -1,457 +1,1198 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <title>王宇东的个人简历</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- 引入 bootstrap4.js -->
-  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <!-- 引入 echarts.js -->
-  <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
-  <!-- 引入 echarts主题 -->
-  <script src="https://www.runoob.com/static/js/wonderland.js"></script>
-  <!-- 樱花特效引入,会和唯美标签冲突从而不显示,就注掉了 -->
-  <!-- <script src="https://files.cnblogs.com/files/quaint/sakuraPlus.js"></script> -->
-  <!-- 唯美标签引入 -->
-		<script src="./wmbq.js" type="text/javascript" charset="utf-8"></script>
-		<style>
-			#wmbq{position:relative;height:190px;margin:10px auto 10px;}
-			#wmbq a{position:absolute;color:#FFFFFF;text-decoration: none;text-align:center;text-overflow:ellipsis;white-space:nowrap;top:0;left:0;padding:3px 5px;border:0;transition:none;}
-			#wmbq a:hover{background: none; display:block;}
-			#wmbq a:nth-child(n){display:inline-block;line-height:18px;text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px red, 0 0 5px red, 0 0 5px red, 0 0 5px red, 0 0 5px red;}
-			#wmbq a:nth-child(2n){text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #FF1177, 0 0 5px #FF1177, 0 0 5px #FF1177, 0 0 5px #FF1177, 0 0 5px #FF1177;}
-			#wmbq a:nth-child(3n){text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #228DFF, 0 0 5px #228DFF, 0 0 5px #228DFF, 0 0 5px #228DFF, 0 0 5px #228DFF;}
-			#wmbq a:nth-child(4n){text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #000000, 0 0 5px #000000, 0 0 5px #000000, 0 0 5px #000000, 0 0 5px #000000;}
-			#wmbq a:nth-child(5n){text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #00ffdc, 0 0 5px #00ffdc, 0 0 5px #00ffdc, 0 0 5px #00ffdc, 0 0 5px #00ffdc;}
-			#wmbq a:nth-child(6n){text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #ff00de, 0 0 5px #ff00de, 0 0 5px #ff00de, 0 0 5px #ff00de, 0 0 5px #ff00de;}
-		</style>
-  <style>
-    /* 背景渐变色渲染原理 */
-    body{ min-height: 100%; background: linear-gradient(#ffffff,#FFFAD0); }
-    .fakeimg {
-        height: 380px;
-        background: #aaa;
-    }
-    #grad1 {
-    height: 400px;
-      background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(16,33,106,1));
-    }
-  </style>
+<meta charset="utf-8">
+<title>laddzhao暂时主页</title>
+<style>
+g {
+  transform-box: fill-box;
+}
+g * {
+  transform-box: border-box;
+}
+
+#bikechain {
+    stroke-dasharray: 5 2;
+    stroke-dashoffset: 300;
+  animation: moveChain 4s linear infinite;
+}
+
+@keyframes moveChain {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#crank {
+  transform-origin: 50% 50% 0;
+}
+#left-arm {
+  transform-origin: 50% 97% 0;
+}
+#right-arm {
+  transform-origin: 50% 0% 0;
+}
+
+#left-arm,  #right-arm, #crank {
+    -webkit-animation: rotate 4s linear infinite;
+    -moz-animation: rotate 4s linear infinite;
+    animation: rotate 4s linear infinite;
+}
+
+
+#rear_wheel, #front_wheel {
+    transform-origin: center;
+    -webkit-animation: rotate 3s linear infinite;
+    -moz-animation: rotate 3s linear infinite;
+    animation: rotate 3s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes rotate {
+    from {-moz-transform: rotate(0deg);}
+    to {-moz-transform: rotate(360deg);}
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+
+#bike {
+    display: flex;    
+}
+
+#Layer_1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 600px;
+}</style>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body>
+<div id="bike">
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1125.6 650.76">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
 
-<div class="jumbotron text-center" style="margin-bottom:0" id="grad1">
-    <br/>
-    <h1>王宇东 20岁</h1>
-    <h2>☾腾讯云工坊☆JavaWeb开发☆CSDN Lv3☽</h2>
-    <br/>
-    <p>软件设计有两种方式：一种方式是,使软件过于简单,明显没有缺陷；另一种方式是,使软件过于复杂,没有明显的缺陷。—C.A.R. Hoare</p>
-    <h3>想应聘的岗位:Java实习生</h3>
-    <br/>
-  <div class="container">          
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th><img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3235483746,549061446&fm=26&gp=0.jpg" alt="logo" style="width:40px;">xyecy1314@qq.com</th>
-          <th><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=507605381,3084649466&fm=26&gp=0.jpg" alt="logo" style="width:40px;">156-1963-2607</th>
-        </tr>
-      </thead>
-    </table>
-  </div>
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-11, .cls-23, .cls-25, .cls-3, .cls-39, .cls-5, .cls-7, .cls-8 {
+        fill: none;
+      }
+
+      .cls-3 {
+        stroke: #ddb18d;
+        stroke-width: 5px;
+      }
+
+      .cls-11, .cls-17, .cls-23, .cls-25, .cls-27, .cls-3, .cls-32, .cls-38, .cls-39, .cls-42, .cls-5, .cls-7, .cls-8 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-17, .cls-27, .cls-5, .cls-8 {
+        stroke: #000;
+      }
+
+      .cls-6 {
+        fill: url(#radial-gradient-2);
+      }
+
+      .cls-11, .cls-7 {
+        stroke-width: 18px;
+      }
+
+      .cls-7 {
+        stroke: url(#radial-gradient-3);
+      }
+
+      .cls-8 {
+        stroke-width: 12px;
+      }
+
+      .cls-9 {
+        fill: url(#radial-gradient-4);
+      }
+
+      .cls-10 {
+        fill: url(#radial-gradient-5);
+      }
+
+      .cls-11 {
+        stroke: url(#radial-gradient-6);
+      }
+
+      .cls-12 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-13 {
+        fill: url(#linear-gradient-4);
+      }
+
+      .cls-14 {
+        fill: url(#linear-gradient-5);
+      }
+
+      .cls-15 {
+        fill: url(#linear-gradient-6);
+      }
+
+      .cls-16 {
+        fill: url(#linear-gradient-7);
+      }
+
+      .cls-17 {
+        fill: #999;
+        stroke-width: 0.5px;
+      }
+
+      .cls-18 {
+        fill: url(#linear-gradient-8);
+      }
+
+      .cls-19 {
+        fill: url(#linear-gradient-9);
+      }
+
+      .cls-20 {
+        fill: url(#linear-gradient-10);
+      }
+
+      .cls-21 {
+        fill: url(#linear-gradient-11);
+      }
+
+      .cls-22 {
+        fill: url(#linear-gradient-12);
+      }
+
+      .cls-23 {
+        stroke-width: 20px;
+        stroke: url(#linear-gradient-13);
+      }
+
+      .cls-24 {
+        fill: url(#linear-gradient-14);
+      }
+
+      .cls-25 {
+        stroke: #4d4d4d;
+      }
+
+      .cls-25, .cls-27, .cls-32 {
+        stroke-width: 0.25px;
+      }
+
+      .cls-26 {
+        fill: url(#linear-gradient-15);
+      }
+
+      .cls-27 {
+        fill: url(#linear-gradient-16);
+      }
+
+      .cls-28 {
+        fill: url(#linear-gradient-17);
+      }
+
+      .cls-29 {
+        fill: url(#linear-gradient-18);
+      }
+
+      .cls-30 {
+        fill: url(#linear-gradient-19);
+      }
+
+      .cls-31 {
+        fill: url(#radial-gradient-7);
+      }
+
+      .cls-32, .cls-39 {
+        stroke: #333;
+      }
+
+      .cls-32 {
+        fill: url(#linear-gradient-20);
+      }
+
+      .cls-33 {
+        fill: url(#linear-gradient-21);
+      }
+
+      .cls-34 {
+        fill: url(#linear-gradient-22);
+      }
+
+      .cls-35 {
+        fill: url(#radial-gradient-8);
+      }
+
+      .cls-36 {
+        fill: #232121;
+      }
+
+      .cls-37 {
+        fill: url(#radial-gradient-9);
+      }
+
+      .cls-38 {
+        fill: #666;
+        stroke: #1a1a1a;
+      }
+
+      .cls-39 {
+        stroke-width: 4px;
+      }
+
+      .cls-40 {
+        fill: url(#linear-gradient-23);
+      }
+
+      .cls-41 {
+        fill: url(#linear-gradient-24);
+      }
+
+      .cls-42 {
+        fill: url(#radial-gradient-10);
+        stroke: url(#radial-gradient-11);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="2269.23" y1="148.43" x2="2286.23" y2="148.43" gradientTransform="matrix(-1, 0, 0, 1, 2782.43, 252.03)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.02" stop-color="#434343"/>
+      <stop offset="0.04" stop-color="#454545"/>
+      <stop offset="0.51" stop-color="#7c7c7c"/>
+      <stop offset="0.6" stop-color="#6d6d6d"/>
+      <stop offset="0.86" stop-color="#454545"/>
+      <stop offset="1" stop-color="#363636"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="2259.85" y1="95.53" x2="2295.72" y2="95.53" gradientTransform="matrix(-1, 0, 0, 1, 2811.43, 385.97)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.02" stop-color="#222"/>
+      <stop offset="0.11" stop-color="#262626"/>
+      <stop offset="0.2" stop-color="#333"/>
+      <stop offset="0.29" stop-color="#484848"/>
+      <stop offset="0.39" stop-color="#666"/>
+      <stop offset="0.49" stop-color="#8c8c8c"/>
+      <stop offset="0.51" stop-color="#969696"/>
+      <stop offset="0.57" stop-color="#838383"/>
+      <stop offset="0.69" stop-color="#606060"/>
+      <stop offset="0.81" stop-color="#474747"/>
+      <stop offset="0.91" stop-color="#373737"/>
+      <stop offset="1" stop-color="#323232"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="261.5" cy="544.9" r="24.43" gradientTransform="translate(0 8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.25" stop-color="gray"/>
+      <stop offset="0.26" stop-color="#838383"/>
+      <stop offset="0.43" stop-color="#ababab"/>
+      <stop offset="0.57" stop-color="#c3c3c3"/>
+      <stop offset="0.65" stop-color="#ccc"/>
+      <stop offset="0.73" stop-color="#c9c9c9"/>
+      <stop offset="0.79" stop-color="#bfbfbf"/>
+      <stop offset="0.84" stop-color="#aeaeae"/>
+      <stop offset="0.9" stop-color="#979797"/>
+      <stop offset="0.94" stop-color="#797979"/>
+      <stop offset="0.99" stop-color="#545454"/>
+      <stop offset="1" stop-color="#4d4d4d"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="261.55" cy="552.46" r="33.24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#969696"/>
+      <stop offset="0.12" stop-color="#8e8e8e"/>
+      <stop offset="0.31" stop-color="#777"/>
+      <stop offset="0.54" stop-color="#515151"/>
+      <stop offset="0.71" stop-color="#323232"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="260.9" cy="544.9" r="215.1" gradientTransform="translate(-29 -125.94)" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-4" cx="922.9" cy="544.6" r="15.47" gradientTransform="translate(-29 -125.94)" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-5" cx="922.9" cy="544.6" r="24.43" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-6" cx="922.9" cy="544.6" r="215.1" gradientTransform="translate(-29 -125.94)" xlink:href="#radial-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="887.88" y1="491.86" x2="901.46" y2="485.24" gradientTransform="translate(0 8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.25" stop-color="#00d9d9"/>
+      <stop offset="0.51" stop-color="#00f1f1"/>
+      <stop offset="0.68" stop-color="#00fcfc"/>
+      <stop offset="1" stop-color="#00cfcf"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="839.87" y1="374.83" x2="857.27" y2="369.51" gradientTransform="translate(0 8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.25" stop-color="#00d9d9"/>
+      <stop offset="0.68" stop-color="#00fcfc"/>
+      <stop offset="0.75" stop-color="#00f0f0"/>
+      <stop offset="0.9" stop-color="#00d8d8"/>
+      <stop offset="1" stop-color="#00cfcf"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="792.43" y1="213.57" x2="809.66" y2="208.3" gradientTransform="translate(-29 -125.94)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#313131"/>
+      <stop offset="0.69" stop-color="#7d7d7d"/>
+      <stop offset="0.93" stop-color="#bababa"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="778.39" y1="204.04" x2="812.46" y2="204.04" gradientTransform="translate(0 8)" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-7" x1="805.73" y1="194.1" x2="862.11" y2="194.1" gradientTransform="translate(0 8)" xlink:href="#linear-gradient-5"/>
+    <linearGradient id="linear-gradient-8" x1="487.65" y1="419.82" x2="508.32" y2="415.04" gradientTransform="translate(0 8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.25" stop-color="#00d9d9"/>
+      <stop offset="0.39" stop-color="#1ce4e4"/>
+      <stop offset="0.72" stop-color="#5dfcfc"/>
+      <stop offset="0.77" stop-color="#49f2f2"/>
+      <stop offset="0.87" stop-color="#21dfdf"/>
+      <stop offset="0.95" stop-color="#09d3d3"/>
+      <stop offset="1" stop-color="#00cfcf"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-9" x1="644.26" y1="274.89" x2="643.14" y2="249.35" xlink:href="#linear-gradient-4"/>
+    <linearGradient id="linear-gradient-10" x1="671.58" y1="409.19" x2="692.02" y2="428.93" xlink:href="#linear-gradient-4"/>
+    <linearGradient id="linear-gradient-11" x1="361.28" y1="401.72" x2="370.92" y2="408.6" xlink:href="#linear-gradient-4"/>
+    <linearGradient id="linear-gradient-12" x1="412.62" y1="545.75" x2="412.62" y2="584.22" xlink:href="#linear-gradient-4"/>
+    <linearGradient id="linear-gradient-13" x1="808.46" y1="271.56" x2="828.18" y2="265.53" gradientTransform="translate(-29 -125.94)" xlink:href="#linear-gradient-4"/>
+    <linearGradient id="linear-gradient-14" x1="817.31" y1="308.07" x2="840.45" y2="299.64" gradientTransform="translate(0 8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.25" stop-color="#5e5e5e"/>
+      <stop offset="0.4" stop-color="#838383"/>
+      <stop offset="0.59" stop-color="#ababab"/>
+      <stop offset="0.74" stop-color="#c3c3c3"/>
+      <stop offset="0.83" stop-color="#ccc"/>
+      <stop offset="0.86" stop-color="#acacac"/>
+      <stop offset="0.9" stop-color="#858585"/>
+      <stop offset="0.94" stop-color="#696969"/>
+      <stop offset="0.98" stop-color="#575757"/>
+      <stop offset="1" stop-color="#515151"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-15" x1="795.39" y1="235.86" x2="818.66" y2="227.39" gradientTransform="translate(0 8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.25" stop-color="#5e5e5e"/>
+      <stop offset="0.41" stop-color="#838383"/>
+      <stop offset="0.61" stop-color="#ababab"/>
+      <stop offset="0.77" stop-color="#c3c3c3"/>
+      <stop offset="0.87" stop-color="#ccc"/>
+      <stop offset="0.89" stop-color="#acacac"/>
+      <stop offset="0.93" stop-color="#858585"/>
+      <stop offset="0.96" stop-color="#696969"/>
+      <stop offset="0.98" stop-color="#575757"/>
+      <stop offset="1" stop-color="#515151"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-16" x1="255" y1="540.97" x2="298.07" y2="540.97" gradientTransform="translate(0 8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.25" stop-color="#999"/>
+      <stop offset="0.38" stop-color="#b6b6b6"/>
+      <stop offset="0.58" stop-color="#dedede"/>
+      <stop offset="0.73" stop-color="#f6f6f6"/>
+      <stop offset="0.83" stop-color="#fff"/>
+      <stop offset="0.85" stop-color="#dfdfdf"/>
+      <stop offset="0.89" stop-color="#adadad"/>
+      <stop offset="0.92" stop-color="#858585"/>
+      <stop offset="0.95" stop-color="#696969"/>
+      <stop offset="0.98" stop-color="#575757"/>
+      <stop offset="1" stop-color="#515151"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-17" x1="409.81" y1="224.08" x2="457.11" y2="212.28" gradientTransform="translate(0 8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.25" stop-color="gray"/>
+      <stop offset="0.27" stop-color="#838383"/>
+      <stop offset="0.5" stop-color="#ababab"/>
+      <stop offset="0.69" stop-color="#c3c3c3"/>
+      <stop offset="0.8" stop-color="#ccc"/>
+      <stop offset="0.85" stop-color="#dbdbdb"/>
+      <stop offset="0.94" stop-color="#ececec"/>
+      <stop offset="1" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-18" x1="352.7" y1="157.2" x2="496.8" y2="157.2" gradientTransform="translate(0 8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.25" stop-color="#999"/>
+      <stop offset="0.33" stop-color="#a9a9a9"/>
+      <stop offset="0.55" stop-color="#d1d1d1"/>
+      <stop offset="0.72" stop-color="#e9e9e9"/>
+      <stop offset="0.83" stop-color="#f2f2f2"/>
+      <stop offset="0.84" stop-color="#dfdfdf"/>
+      <stop offset="0.88" stop-color="#adadad"/>
+      <stop offset="0.92" stop-color="#858585"/>
+      <stop offset="0.95" stop-color="#696969"/>
+      <stop offset="0.98" stop-color="#575757"/>
+      <stop offset="1" stop-color="#515151"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-19" x1="333.65" y1="148.75" x2="515.25" y2="148.75" gradientTransform="translate(0 8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.25" stop-color="#4a211b"/>
+      <stop offset="0.33" stop-color="#4a231d"/>
+      <stop offset="0.83" stop-color="#482b26"/>
+      <stop offset="0.87" stop-color="#542f1f"/>
+      <stop offset="0.94" stop-color="#653416"/>
+      <stop offset="1" stop-color="#6b3612"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient-7" cx="501.06" cy="148.26" r="4.28" gradientTransform="translate(-29 -125.94)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.19" stop-color="#de8642"/>
+      <stop offset="0.39" stop-color="#d98341"/>
+      <stop offset="0.61" stop-color="#cc7b3c"/>
+      <stop offset="0.85" stop-color="#b56d36"/>
+      <stop offset="1" stop-color="#a36230"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient-20" x1="480.51" y1="264.32" x2="443.58" y2="274.22" gradientTransform="translate(0 8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.25" stop-color="#5e5e5e"/>
+      <stop offset="0.29" stop-color="#888"/>
+      <stop offset="0.34" stop-color="#b0b0b0"/>
+      <stop offset="0.38" stop-color="#c8c8c8"/>
+      <stop offset="0.4" stop-color="#d1d1d1"/>
+      <stop offset="0.52" stop-color="#acacac"/>
+      <stop offset="0.66" stop-color="#858585"/>
+      <stop offset="0.8" stop-color="#686868"/>
+      <stop offset="0.91" stop-color="#575757"/>
+      <stop offset="1" stop-color="#515151"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-21" x1="842.79" y1="237.64" x2="932.18" y2="237.64" gradientTransform="translate(0 8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0.07" stop-color="#603813"/>
+      <stop offset="0.67" stop-color="#603813"/>
+      <stop offset="1" stop-color="#361f0a"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-22" x1="842.1" y1="239.95" x2="957.82" y2="239.95" xlink:href="#linear-gradient-21"/>
+    <radialGradient id="radial-gradient-8" cx="533.7" cy="223.6" r="45.68" gradientTransform="matrix(1, 0, 0, -1, 0, 808)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.12" stop-color="#fbfbfb"/>
+      <stop offset="0.25" stop-color="#eee"/>
+      <stop offset="0.37" stop-color="#dadada"/>
+      <stop offset="0.5" stop-color="#bdbdbd"/>
+      <stop offset="0.63" stop-color="#979797"/>
+      <stop offset="0.76" stop-color="#696969"/>
+      <stop offset="0.89" stop-color="#343434"/>
+      <stop offset="1"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-9" cx="533.65" cy="223.6" r="70.81" gradientTransform="matrix(1, 0, 0, -1, 0, 808)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient-23" x1="525.15" y1="171" x2="542.15" y2="171" gradientTransform="matrix(1, 0, 0, -1, -29, 674.06)" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-24" x1="515.8" y1="118.1" x2="551.67" y2="118.1" gradientTransform="matrix(1, 0, 0, -1, 0, 808)" xlink:href="#linear-gradient-2"/>
+    <radialGradient id="radial-gradient-10" cx="533.72" cy="223.6" r="8.33" gradientTransform="matrix(1, 0, 0, -1, -29, 674.06)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.02" stop-color="#e8e8e8"/>
+      <stop offset="0.07" stop-color="#b8b8b8"/>
+      <stop offset="0.13" stop-color="#8c8c8c"/>
+      <stop offset="0.19" stop-color="#666"/>
+      <stop offset="0.25" stop-color="#464646"/>
+      <stop offset="0.32" stop-color="#2d2d2d"/>
+      <stop offset="0.39" stop-color="#191919"/>
+      <stop offset="0.48" stop-color="#0b0b0b"/>
+      <stop offset="0.58" stop-color="#020202"/>
+      <stop offset="0.77"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-11" cx="533.7" cy="223.6" r="8.84" gradientTransform="matrix(1, 0, 0, -1, -29, 674.06)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.07" stop-color="#f9f9f9"/>
+      <stop offset="0.17" stop-color="#e9e9e9"/>
+      <stop offset="0.28" stop-color="#cfcfcf"/>
+      <stop offset="0.39" stop-color="#aaa"/>
+      <stop offset="0.51" stop-color="#7b7b7b"/>
+      <stop offset="0.64" stop-color="#424242"/>
+      <stop offset="0.77"/>
+    </radialGradient>
+  </defs>
+  <title>bike25t</title>
+  <g id="left-arm">
+    <polygon id="crank-arm" class="cls-1" points="501.1 347.56 508.2 347.56 513.2 453.36 496.2 453.36 501.1 347.56"/>
+    <path id="pedal" class="cls-2" d="M519.7,477.5h27.8a4,4,0,0,1,4,4h0a4,4,0,0,1-4,4H519.7a4,4,0,0,1-4-4h0A4,4,0,0,1,519.7,477.5Z" transform="translate(-29 -133.94)"/>
+  </g>
+  <g id="rear_wheel">
+    <circle class="cls-3" cx="232.5" cy="418.86" r="217.6"/>
+    <g id="hub">
+      <path class="cls-4" d="M261.5,577.4A24.5,24.5,0,1,1,286,552.9,24.54,24.54,0,0,1,261.5,577.4Zm0-30.9A6.5,6.5,0,1,0,268,553,6.49,6.49,0,0,0,261.5,546.5Z" transform="translate(-29 -133.94)"/>
+    </g>
+    <g id="spokes">
+      <line class="cls-5" x1="232.5" y1="418.96" x2="232.5" y2="619.66"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="309.3" y2="604.36"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="374.4" y2="560.86"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="417.9" y2="495.76"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="433.2" y2="418.96"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="417.9" y2="342.26"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="374.4" y2="277.16"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="309.3" y2="233.66"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="232.5" y2="218.36"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="155.7" y2="233.66"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="90.6" y2="277.16"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="47.1" y2="342.26"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="31.8" y2="418.96"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="47.1" y2="495.76"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="90.6" y2="560.86"/>
+      <line class="cls-5" x1="232.5" y1="418.96" x2="155.7" y2="604.36"/>
+    </g>
+    <path class="cls-6" d="M266.47,585.12l-3.17-4.33a0.66,0.66,0,0,0-1.09,0l-2.82,4.56a0.66,0.66,0,0,1-1.17-.1l-2-5a0.66,0.66,0,0,0-1.07-.23l-3.87,3.72a0.66,0.66,0,0,1-1.11-.39l-0.7-5.32a0.66,0.66,0,0,0-1-.49l-4.67,2.64a0.66,0.66,0,0,1-1-.65l0.65-5.33a0.66,0.66,0,0,0-.83-0.72l-5.18,1.4a0.66,0.66,0,0,1-.79-0.88l2-5a0.66,0.66,0,0,0-.62-0.9l-5.37.06a0.66,0.66,0,0,1-.54-1l3.14-4.35a0.66,0.66,0,0,0-.38-1l-5.21-1.27a0.66,0.66,0,0,1-.27-1.15l4.12-3.44a0.66,0.66,0,0,0-.11-1.09l-4.73-2.53a0.66,0.66,0,0,1,0-1.18l4.85-2.31a0.66,0.66,0,0,0,.16-1.08l-4-3.63a0.66,0.66,0,0,1,.32-1.13l5.27-1a0.66,0.66,0,0,0,.43-1l-2.93-4.5a0.66,0.66,0,0,1,.59-1l5.36,0.31a0.66,0.66,0,0,0,.66-0.87l-1.72-5.08a0.66,0.66,0,0,1,.83-0.84l5.11,1.64a0.66,0.66,0,0,0,.86-0.68l-0.4-5.35a0.66,0.66,0,0,1,1-.61l4.54,2.86a0.66,0.66,0,0,0,1-.44l0.94-5.28a0.66,0.66,0,0,1,1.13-.34l3.69,3.9a0.66,0.66,0,0,0,1.08-.18l2.23-4.88a0.66,0.66,0,0,1,1.18,0l2.61,4.69a0.66,0.66,0,0,0,1.09.09l3.37-4.17a0.66,0.66,0,0,1,1.15.25l1.36,5.19a0.66,0.66,0,0,0,1,.36l4.3-3.21a0.66,0.66,0,0,1,1.05.53l0,5.37a0.66,0.66,0,0,0,.91.61l5-2a0.66,0.66,0,0,1,.89.77l-1.31,5.2a0.66,0.66,0,0,0,.73.81l5.32-.74a0.66,0.66,0,0,1,.67,1L286.51,539a0.66,0.66,0,0,0,.5,1l5.33,0.61a0.66,0.66,0,0,1,.41,1.1l-3.66,3.93a0.66,0.66,0,0,0,.25,1.07l5,1.92a0.66,0.66,0,0,1,.12,1.17L290,552.63a0.66,0.66,0,0,0,0,1.09l4.38,3.1a0.66,0.66,0,0,1-.17,1.16l-5.1,1.68a0.66,0.66,0,0,0-.3,1.05l3.47,4.09a0.66,0.66,0,0,1-.46,1.08l-5.35.36a0.66,0.66,0,0,0-.55.95l2.34,4.83a0.66,0.66,0,0,1-.71.94l-5.28-1a0.66,0.66,0,0,0-.77.78L282.5,578a0.66,0.66,0,0,1-.92.73l-4.86-2.26a0.66,0.66,0,0,0-.94.56l-0.27,5.36a0.66,0.66,0,0,1-1.08.48l-4.15-3.4a0.66,0.66,0,0,0-1,.31l-1.6,5.12A0.66,0.66,0,0,1,266.47,585.12Z" transform="translate(-29 -133.94)"/>
+    <circle id="rim" class="cls-7" cx="231.9" cy="418.96" r="206.1"/>
+    <circle id="tire" class="cls-8" cx="231.7" cy="419.06" r="225.7"/>
+  </g>
+  <g id="front_wheel">
+    <circle class="cls-3" cx="893.9" cy="417.56" r="217.6"/>
+    <g id="spokes-2" data-name="spokes">
+      <line class="cls-5" x1="893.9" y1="418.76" x2="893.9" y2="619.36"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="970.7" y2="604.06"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="1035.8" y2="560.56"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="1079.3" y2="495.46"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="1094.5" y2="418.76"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="1079.3" y2="341.96"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="1035.8" y2="276.86"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="970.7" y2="233.36"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="893.9" y2="218.06"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="817.1" y2="233.36"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="752" y2="276.86"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="708.5" y2="341.96"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="693.2" y2="418.76"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="708.5" y2="495.46"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="752" y2="560.56"/>
+      <line class="cls-5" x1="893.9" y1="418.76" x2="817.1" y2="604.06"/>
+    </g>
+    <g id="hub-2" data-name="hub">
+      <circle class="cls-9" cx="893.9" cy="418.66" r="15.5"/>
+      <path class="cls-10" d="M922.9,577.1a24.5,24.5,0,1,1,24.5-24.5A24.54,24.54,0,0,1,922.9,577.1Zm0-30.9a6.5,6.5,0,1,0,6.5,6.5A6.49,6.49,0,0,0,922.9,546.2Z" transform="translate(-29 -133.94)"/>
+    </g>
+    <circle id="rim-2" data-name="rim" class="cls-11" cx="893.9" cy="418.66" r="206.1"/>
+    <circle id="tire-2" data-name="tire" class="cls-8" cx="893.9" cy="418.66" r="225.7"/>
+  </g>
+  <g id="frame">
+    <g id="fork">
+      <path class="cls-12" d="M924.2,546.2s-27.7-61-42.4-91a190.94,190.94,0,0,1-8.2-19.2c-3.6,4.6-9.6,4.1-12.2,9.5C882.1,484.8,916.9,548,916.9,548c2.1,3.3,4.7,6.7,8,4.6h0C927.2,551.4,925.6,548.5,924.2,546.2Z" transform="translate(-29 -133.94)"/>
+      <path class="cls-13" d="M868.7,421.2L837.1,311.5l-15.3,4.6,11.9,46.5c1.1,3.8,20.7,69.9,28.8,85.4,0.5,1-1.7-3.4-1.1-2.3,2.6-5.4,8.6-4.9,12.2-9.5C871.8,431.2,870.1,426.2,868.7,421.2Z" transform="translate(-29 -133.94)"/>
+      <polygon class="cls-14" points="769.8 108.56 757 66.76 774.2 61.46 787 103.26 769.8 108.56"/>
+      <path class="cls-15" d="M805.8,197a3,3,0,0,1-1.8-1.7c-0.1-.2-0.2-0.3-0.4-0.2l-17.3,5.1a2.12,2.12,0,0,0-1.3,3,0.25,0.25,0,0,1-.2.4l-4.3,1.6c-1.5.2-2.4,2.8-2.2,4.4h0a0.9,0.9,0,0,0,.1.5,4.47,4.47,0,0,0,5.5,3.2l3.1-.8a0.52,0.52,0,0,1,.4.2l2.3,6.3a6.37,6.37,0,0,1-1.4.8l-1.8.9a4.63,4.63,0,0,0-2.4,5.6v0.1a3.7,3.7,0,0,0,4.5,2.5l3.3-.9,17.5-5.4a2.62,2.62,0,0,0,1.8-3.1h0l1.3-.2a28.49,28.49,0,0,1-6.4-22.1A0.77,0.77,0,0,0,805.8,197Z" transform="translate(-29 -133.94)"/>
+      <path class="cls-16" d="M861.8,206.7l-6.2-.2a11.11,11.11,0,0,1-8.1-3.8,6.57,6.57,0,0,1-1-7.2,13.57,13.57,0,0,1,3.2-4.3l8.5-4.4-0.5-2-12.8,2.1-2.5,4.3L807,197a3.35,3.35,0,0,1-1,0,29.17,29.17,0,0,0,6.4,22.4l28.5-5,2.1,1.2a12,12,0,0,0,8.7,1.2l8.3-2.2a2.81,2.81,0,0,0,2.1-2.9Z" transform="translate(-29 -133.94)"/>
+      <circle class="cls-17" cx="758.6" cy="91.06" r="1.9"/>
+      <circle class="cls-17" cx="753.3" cy="75.16" r="1.9"/>
+    </g>
+    <path id="seat_tube" data-name="seat tube" class="cls-18" d="M525,584.4L452.9,277.3a6.52,6.52,0,0,1,4.9-7.8l13.2-3,73.6,313.3Z" transform="translate(-29 -133.94)"/>
+    <path id="toptube" class="cls-19" d="M821.3,262.1a16.47,16.47,0,0,0-16.7-11.8L466,266.7h-0.4c3.8,5.2.2,10.3,4.1,15.4l337.2-15c0.6,0,2.9,4,4.7,8.4a80.27,80.27,0,0,0,9.7-13.4h0Z" transform="translate(-29 -133.94)"/>
+    <path id="downtube" class="cls-20" d="M821.3,262.1a86,86,0,0,1-9.8,13.5c1.8,4.3,3,9,1.6,10.4L538.6,568q0.6,10.95,1.5,21.9a12.55,12.55,0,0,0,3.8-2.5L820.4,304a25.31,25.31,0,0,0,6.1-24.6Z" transform="translate(-29 -133.94)"/>
+    <path id="seatstay" class="cls-21" d="M280.3,539.2L457.8,294.8s-1.1-18.9-4.3-14.4L269.2,539.1C267,542.2,277.6,543,280.3,539.2Z" transform="translate(-29 -133.94)"/>
+    <path id="chainstay" class="cls-22" d="M538.6,568l-1.5,1.6c-2.6,2.6-6.8,7.9-10.4,7.4L287.2,553.7c-5.8-.7,1.6,11.6,4.2,11.9l235.2,26.5c0.8,0.1,8.2.2,13.6-2.2C539.5,582.7,539,575.3,538.6,568Z" transform="translate(-29 -133.94)"/>
+    <g id="head_tube" data-name="head tube">
+      <line class="cls-23" x1="778.4" y1="105.96" x2="800.2" y2="179.26"/>
+    </g>
+    <g id="headset">
+      <g id="headset-2" data-name="headset">
+        <g>
+          <path class="cls-24" d="M838.1,305.7l-20.5,6.1a1.58,1.58,0,0,0-1.1,2h0a5.2,5.2,0,0,0,6.4,3.5l13.7-4.1a5.2,5.2,0,0,0,3.5-6.4h0A1.51,1.51,0,0,0,838.1,305.7Z" transform="translate(-29 -133.94)"/>
+          <path class="cls-25" d="M838.1,305.7l-20.5,6.1a1.58,1.58,0,0,0-1.1,2h0a5.2,5.2,0,0,0,6.4,3.5l13.7-4.1a5.2,5.2,0,0,0,3.5-6.4h0A1.51,1.51,0,0,0,838.1,305.7Z" transform="translate(-29 -133.94)"/>
+        </g>
+        <rect x="816.52" y="311.51" width="24.7" height="1" transform="translate(-83.51 114.76) rotate(-16.53)"/>
+      </g>
+      <g id="headset-3" data-name="headset">
+        <g>
+          <path class="cls-26" d="M798.1,246.9l20.5-6.1a1.58,1.58,0,0,0,1.1-2l-0.7-2.2a5.2,5.2,0,0,0-6.4-3.5l-13.7,4.1a5.2,5.2,0,0,0-3.5,6.4l0.7,2.2A1.58,1.58,0,0,0,798.1,246.9Z" transform="translate(-29 -133.94)"/>
+          <path class="cls-25" d="M798.1,246.9l20.5-6.1a1.58,1.58,0,0,0,1.1-2l-0.7-2.2a5.2,5.2,0,0,0-6.4-3.5l-13.7,4.1a5.2,5.2,0,0,0-3.5,6.4l0.7,2.2A1.58,1.58,0,0,0,798.1,246.9Z" transform="translate(-29 -133.94)"/>
+        </g>
+        <rect x="794.72" y="238.71" width="24.7" height="1.3" transform="translate(-63.75 105.56) rotate(-16.53)"/>
+      </g>
+    </g>
+    <path id="rear_fork_end" data-name="rear fork end" class="cls-27" d="M272.3,535.5l-5,4-7.9,2.4a4.47,4.47,0,0,0-3.2,4.2v0.6a1.56,1.56,0,0,0,1.6,2l14.4-.4a5.64,5.64,0,0,1,5.8,5.6v1a3.4,3.4,0,0,1-3.9,3.4l-17.9-2.5a1,1,0,0,0-1.2,1.1V558a4.15,4.15,0,0,0,3.8,4.2l31.1,3.3a9.08,9.08,0,0,0,5.8-1.3l1.1-.7a4.29,4.29,0,0,0,0-6.1s-4.2-4.1-5-4.9l-4-4.5-5.9-5.7a6.34,6.34,0,0,1-1.9-3.6l-0.8-4.7a2.6,2.6,0,0,0-2.4-1.6h0a4.59,4.59,0,0,0-3.1,1.5Z" transform="translate(-29 -133.94)"/>
+    <path id="seatpost" class="cls-28" d="M449.5,265.8l-9.8-42.3c-2.2-9.4-9.6-23.8-19-25.9l-14.6-3.3c-2.1-.5-7.3-6.4-7.3-6.4-1-3.1,5-4.1,8.2-3.9l24.6-.5c5,0.2,9.6-1.1,12.3,3.1,0,0,7.7,12.1,10.9,24.4l13.4,53.8c0.7,2.6-1.2,2.6-3.9,3l-9.6,1.6A4.57,4.57,0,0,1,449.5,265.8Z" transform="translate(-29 -133.94)"/>
+    <g id="saddle">
+      <path id="saddle_rails" data-name="saddle rails" class="cls-29" d="M372.8,183a18.77,18.77,0,0,1-18.7-16.9l-1.4-21.5,2.7,1.6,1.7,19.6A15.92,15.92,0,0,0,372.9,180h0.4l49.7,2.8a11.29,11.29,0,0,0,4.4-1l20.2-10.2a17.83,17.83,0,0,1,5.5-1.4l41.7-6.6,2,1.5-43.4,8.1a12.55,12.55,0,0,0-4.6,1.2l-20.2,10.2a13.42,13.42,0,0,1-5.6,1.2L373.3,183h-0.5Z" transform="translate(-29 -133.94)"/>
+      <path id="saddle_leather" data-name="saddle leather" class="cls-30" d="M513.7,162c-1.8,2.3-10.2,3.4-12.4,3.6a34.54,34.54,0,0,1-4.6.1c-2.6-.1-30.5-0.3-38.1-0.3a61.71,61.71,0,0,0-8.4,1.5l-32.2,12c-4.1,1.5-13.8.4-22.1-2.9-0.1,0-46.8-26.6-46.8-26.6a0.37,0.37,0,0,0-.3-0.1,105.91,105.91,0,0,0-11.2-1.4c-4.2-.4-5.5-6.2-1.7-8.1,0.1-.1.3-0.1,0.4-0.2l5.1-1.9c18.4-3.3,18.6-5.9,45.9-1.2,8.2,1.4,11.8,2.7,18.8,5.3,10.3,3.9,89.4,1.1,89.4,1.1h0.7c12.7,1.1,15.4,6.1,18.2,10.5C516.5,156.8,514.1,161.5,513.7,162Z" transform="translate(-29 -133.94)"/>
+      <circle class="cls-31" cx="472.1" cy="22.36" r="4.3"/>
+    </g>
+    <g id="seatpost_collar_lug">
+      <path class="cls-32" d="M475.7,289.7L452.1,277h-6a5.12,5.12,0,0,1-5.1-5.1v-0.4a5,5,0,0,1,4.5-5l6-.7,10.4-2.6a10.55,10.55,0,0,0,4.8-2.8l0.8-.9,0.8,3.3a3.22,3.22,0,0,0,3.2,2.5l7.4,0.8-6.7.9a4.66,4.66,0,0,0-3.6,2.6,5,5,0,0,0-.5,1.6,6.39,6.39,0,0,0,3.7,7.5l9.6,3.3a0.36,0.36,0,0,1-.1.7l-4.7.4a1.34,1.34,0,0,0-1.1,1.9l1.1,4.1A0.58,0.58,0,0,1,475.7,289.7Z" transform="translate(-29 -133.94)"/>
+      <circle class="cls-17" cx="416.8" cy="137.66" r="1.9"/>
+    </g>
+    <path class="cls-33" d="M867.1,216l35.5,15.5a0.53,0.53,0,0,1,.3.2c11.9,11.3,21.3,19,5.2,37.3-2.8,3.1-11.7,6.5-15.9,6.8l-45.8,2.5a0.76,0.76,0,0,0-.4.1c-2,.9-2.8,2-2.9,4.4l-0.3,8a2.13,2.13,0,0,0,2.3,2.2s56.7-5.5,57.9-5.8c39.4-11.2,40.9-50.9-7.8-76.3a0.1,0.1,0,0,1-.1-0.1l-33.6-12.3c-1.6-.7-7.3.3-8.8,1.1l-3,1.4a7,7,0,0,0-4,4.7c-0.1.4-.1,0.8-0.2,1.2a7.12,7.12,0,0,0,7.8,7.3l2.3-.2C857.2,213.7,865.9,215.1,867.1,216Z" transform="translate(-29 -133.94)"/>
+    <path class="cls-34" d="M873.6,209.7l45.9,20c0.1,0.1.3,0.1,0.4,0.2,15.4,14.6,27.5,24.5,6.7,48.3-3.6,4.1-15.2,8.4-20.6,8.8l-59.3,3.2a0.9,0.9,0,0,0-.5.1c-2.6,1.2-3.6,2.6-3.7,5.6l-0.4,10.4a2.81,2.81,0,0,0,3,2.9s73.4-7.1,75-7.5C971,287.2,973,235.8,910,202.9c-0.1,0-.1-0.1-0.2-0.1L866.4,187c-2.1-.9-9.4.4-11.4,1.4l-3.9,1.8a9.16,9.16,0,0,0-5.1,6.1,8.75,8.75,0,0,0-.2,1.6,9.15,9.15,0,0,0,10.2,9.4l3-.3C860.7,206.8,872,208.6,873.6,209.7Z" transform="translate(-29 -133.94)"/>
+  </g>
+  <g id="crank">
+    <path id="ring" class="cls-35" d="M537.9,629.9a45.69,45.69,0,1,1,41.3-41.3A45.78,45.78,0,0,1,537.9,629.9Zm-0.7-84a38.71,38.71,0,1,0,35,35A38.84,38.84,0,0,0,537.2,545.9Z" transform="translate(-29 -133.94)"/>
+    <polygon id="crank-arm-2" data-name="crank-arm" class="cls-36" points="508.2 395.56 501.1 395.56 496.2 453.36 513.2 453.36 508.2 395.56"/>
+    <polygon id="crank-arm-3" data-name="crank-arm" class="cls-36" points="562.6 436.16 560.4 429.36 503.9 442.56 509.2 458.76 562.6 436.16"/>
+    <polygon id="crank-arm-4" data-name="crank-arm" class="cls-36" points="499.6 458.26 504.9 442.06 448.4 428.86 446.2 435.66 499.6 458.26"/>
+    <polygon id="crank-arm-5" data-name="crank-arm" class="cls-36" points="510.7 456.66 497 446.76 467 496.36 472.8 500.56 510.7 456.66"/>
+    <polygon id="crank-arm-6" data-name="crank-arm" class="cls-36" points="536.1 501.06 541.8 496.86 511.8 447.26 498.1 457.26 536.1 501.06"/>
+    <path id="chainring" class="cls-37" d="M603.5,584.5a1.41,1.41,0,0,1-.1,2.7l-4.9,1.3a1.44,1.44,0,0,0-.2,2.7l4.6,2.1a1.42,1.42,0,0,1-.4,2.7l-5,.7a1.39,1.39,0,0,0-.5,2.6l4.3,2.6a1.4,1.4,0,0,1-.7,2.6l-5,.1a1.42,1.42,0,0,0-.9,2.5l3.9,3.2a1.4,1.4,0,0,1-1,2.5l-5-.6a1.43,1.43,0,0,0-1.2,2.4l3.5,3.6a1.37,1.37,0,0,1-1.3,2.3l-4.9-1.2a1.42,1.42,0,0,0-1.5,2.2l3,4a1.42,1.42,0,0,1-1.6,2.2l-4.7-1.8a1.39,1.39,0,0,0-1.7,2l2.5,4.4a1.4,1.4,0,0,1-1.9,1.9l-4.4-2.4a1.44,1.44,0,0,0-2,1.8l1.9,4.7a1.42,1.42,0,0,1-2.1,1.7l-4.1-2.9a1.41,1.41,0,0,0-2.2,1.5l1.3,4.9a1.39,1.39,0,0,1-2.3,1.4l-3.7-3.4a1.44,1.44,0,0,0-2.4,1.2l0.7,5a1.42,1.42,0,0,1-2.5,1.1l-3.3-3.9a1.42,1.42,0,0,0-2.5.9l0.1,5a1.42,1.42,0,0,1-2.6.8l-2.8-4.2a1.43,1.43,0,0,0-2.6.6l-0.6,5a1.45,1.45,0,0,1-2.7.5l-2.2-4.6a1.38,1.38,0,0,0-2.6.3l-1.2,4.9a1.39,1.39,0,0,1-2.7.1l-1.6-4.8a1.44,1.44,0,0,0-2.7-.1l-1.8,4.7a1.41,1.41,0,0,1-2.7-.2l-1-5a1.39,1.39,0,0,0-2.6-.4l-2.4,4.5a1.44,1.44,0,0,1-2.7-.6l-0.4-5a1.44,1.44,0,0,0-2.6-.7l-2.9,4.1a1.44,1.44,0,0,1-2.6-.9l0.3-5a1.43,1.43,0,0,0-2.5-1l-3.4,3.7a1.39,1.39,0,0,1-2.4-1.2l0.9-5a1.4,1.4,0,0,0-2.3-1.3l-3.9,3.3a1.44,1.44,0,0,1-2.3-1.5l1.5-4.8a1.4,1.4,0,0,0-2.1-1.6l-4.2,2.8a1.39,1.39,0,0,1-2-1.8l2.1-4.6a1.39,1.39,0,0,0-1.9-1.8l-4.5,2.2a1.39,1.39,0,0,1-1.8-2l2.7-4.3a1.41,1.41,0,0,0-1.6-2.1l-4.8,1.6a1.43,1.43,0,0,1-1.6-2.2l3.2-3.9a1.45,1.45,0,0,0-1.4-2.3l-4.9,1a1.42,1.42,0,0,1-1.3-2.4l3.6-3.5a1.4,1.4,0,0,0-1.1-2.4l-5,.4a1.41,1.41,0,0,1-1-2.5l4.1-3a1.37,1.37,0,0,0-.8-2.5l-5-.2a1.38,1.38,0,0,1-.6-2.6l4.4-2.5a1.38,1.38,0,0,0-.4-2.6l-5-.9a1.41,1.41,0,0,1-.3-2.7l4.7-1.9a1.37,1.37,0,0,0-.1-2.6l-4.8-1.5a1.41,1.41,0,0,1,.1-2.7l4.9-1.3a1.37,1.37,0,0,0,.2-2.6l-4.6-2.1a1.42,1.42,0,0,1,.4-2.7l5-.7a1.39,1.39,0,0,0,.5-2.6L466,567a1.4,1.4,0,0,1,.7-2.6h5a1.42,1.42,0,0,0,.9-2.5l-3.9-3.2a1.4,1.4,0,0,1,1-2.5l5,0.6a1.44,1.44,0,0,0,1.2-2.4l-3.5-3.6a1.39,1.39,0,0,1,1.4-2.3l4.9,1.2a1.41,1.41,0,0,0,1.5-2.2l-3-4.1a1.42,1.42,0,0,1,1.6-2.2l4.7,1.8a1.39,1.39,0,0,0,1.7-2l-2.5-4.4a1.39,1.39,0,0,1,1.9-1.9l4.5,2.4a1.44,1.44,0,0,0,2-1.8l-1.9-4.7a1.42,1.42,0,0,1,2.1-1.7l4.1,2.9a1.41,1.41,0,0,0,2.2-1.5l-1.3-4.9a1.39,1.39,0,0,1,2.3-1.4l3.7,3.4a1.44,1.44,0,0,0,2.4-1.2l-0.7-5a1.42,1.42,0,0,1,2.5-1.1l3.3,3.9a1.42,1.42,0,0,0,2.5-.9l-0.1-5a1.42,1.42,0,0,1,2.6-.8l2.8,4.2a1.43,1.43,0,0,0,2.6-.6l0.6-5a1.44,1.44,0,0,1,2.7-.5l2.2,4.5a1.45,1.45,0,0,0,2.7-.3l1.2-4.9a1.39,1.39,0,0,1,2.7-.1l1.6,4.8a1.42,1.42,0,0,0,2.7,0l1.8-4.7a1.41,1.41,0,0,1,2.7.2l1,4.9a1.39,1.39,0,0,0,2.6.4l2.4-4.5a1.44,1.44,0,0,1,2.7.6l0.4,5a1.44,1.44,0,0,0,2.6.7l2.9-4.1a1.44,1.44,0,0,1,2.6.9l-0.3,5.1a1.43,1.43,0,0,0,2.5,1l3.4-3.7a1.39,1.39,0,0,1,2.4,1.2l-0.9,5a1.4,1.4,0,0,0,2.3,1.3l3.9-3.3a1.38,1.38,0,0,1,2.2,1.5l-1.5,4.8a1.4,1.4,0,0,0,2.1,1.6l4.2-2.8a1.39,1.39,0,0,1,2,1.8l-2.1,4.6a1.45,1.45,0,0,0,1.9,1.9l4.5-2.2a1.39,1.39,0,0,1,1.8,2l-2.7,4.3a1.41,1.41,0,0,0,1.6,2.1l4.8-1.6a1.38,1.38,0,0,1,1.5,2.2l-3.2,3.9a1.45,1.45,0,0,0,1.4,2.3l4.9-1a1.42,1.42,0,0,1,1.3,2.4l-3.6,3.5a1.4,1.4,0,0,0,1.1,2.4l5-.4a1.41,1.41,0,0,1,1,2.5l-4.1,3a1.37,1.37,0,0,0,.8,2.5l5,0.3a1.38,1.38,0,0,1,.6,2.6l-4.4,2.5a1.38,1.38,0,0,0,.4,2.6l5,0.9a1.41,1.41,0,0,1,.3,2.7l-4.7,1.9a1.37,1.37,0,0,0,.1,2.6Zm-16.9-.1a53,53,0,1,0-53,53A53.09,53.09,0,0,0,586.6,584.4Z" transform="translate(-29 -133.94)"/>
+    <g id="chainring-bolts">
+      <circle class="cls-38" cx="449.7" cy="431.56" r="3.5"/>
+      <circle class="cls-38" cx="559.8" cy="432.36" r="3.5"/>
+      <circle class="cls-38" cx="504.7" cy="392.06" r="3.5"/>
+      <circle class="cls-38" cx="538.3" cy="497.56" r="3.5"/>
+      <circle class="cls-38" cx="499.52" cy="630.8" r="3.5" transform="translate(-332.45 445.18) rotate(-47.94)"/>
+    </g>
+  </g>
+  <path id="bikechain" class="cls-39" d="M606.68,585.19C606.3,623,573.33,653.28,533,652.87a81.64,81.64,0,0,1-17.82-2.24l-259.1-66.35a44.68,44.68,0,0,1-4.37-1.33c-13.22-4.9-22.51-17-22.37-31.17,0.19-18.29,16.14-33,35.65-32.76l269.41-3C574.72,516.45,607.07,547.41,606.68,585.19Z" transform="translate(-29 -133.94)"/>
+  <g id="right-arm">
+    <polygon id="crank-arm-7" data-name="crank-arm" class="cls-40" points="508.2 555.96 501.1 555.96 496.2 450.16 513.2 450.16 508.2 555.96"/>
+    <path id="pedal-2" data-name="pedal" class="cls-41" d="M547.6,693.9H519.8a4,4,0,0,1-4-4h0a4,4,0,0,1,4-4h27.8a4,4,0,0,1,4,4h0A3.89,3.89,0,0,1,547.6,693.9Z" transform="translate(-29 -133.94)"/>
+  </g>
+  <circle id="crank-bolt" class="cls-42" cx="504.7" cy="450.46" r="8.3"/>
+</svg>
 </div>
-<!-- 滚动监听 -->
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">  
-    <!-- logo -->
-    <a class="navbar-brand" href="#">
-        <img src="https://ss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/tam-ogel/edca5131cdf6336989582c5d44af5652_222_222.jpg" alt="logo" style="width:40px;">
-    </a>
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#section1">专业技能</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#section2">项目经验</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#section3">自我展示</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-          教育经历
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="#section41">教育履历</a>
-          <a class="dropdown-item" href="#section42">工作履历</a>
-        </div>
-      </li>
-    </ul>
-</nav>
-  
-  <div id="section1" class="container-fluid" style="padding-top:70px;padding-bottom:70px">
-            <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-            <div id="main" style="width:100%;height:400px;"></div>
-            <script type="text/javascript">
-                // 基于准备好的dom，初始化echarts实例
-                var myChart = echarts.init(document.getElementById('main'),'wonderland');
-                    var dataAxis = ['Java语言', '实用英语(一)', '计算机应用基础', '高等数学(理工类)', 
-                                    'Java高级开发' , '实用英语(二)', '数据库应用', '网页制作', 
-                                    'Spring框架技术', 'Android开发', 'JQuery框架技术', '动态网站开发'
-                    ];
-                    var data = [89.6, 72.8, 92, 84, 
-                                60.4, 79, 79, 86.8, 
-                                84.8, 82.8, 83.6, 83.6
-                    ];
-                    var yMax = 100;
-                    var dataShadow = [];
-
-                    for (var i = 0; i < data.length; i++) {
-                        dataShadow.push(yMax);
-                    }
-
-                    option = {
-                      tooltip: {
-                          trigger: 'axis',
-                          axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-                              type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-                          }
-                      },
-                        title: {
-                            text: '专业技能',
-                            subtext: '大学成绩单'
-                        },
-                        xAxis: {
-                            data: dataAxis,
-                            axisLabel: {
-                                inside: true,
-                                textStyle: {
-                                    color: '#fff'
-                                }
-                            },
-                            axisTick: {
-                                show: false
-                            },
-                            axisLine: {
-                                show: false
-                            },
-                            z: 10
-                        },
-                        yAxis: {
-                            axisLine: {
-                                show: false
-                            },
-                            axisTick: {
-                                show: false
-                            },
-                            axisLabel: {
-                                textStyle: {
-                                    color: '#999'
-                                }
-                            }
-                        },
-                        dataZoom: [
-                            {
-                                type: 'inside'
-                            }
-                        ],
-                        series: [
-                            { // For shadow
-                            name:'总分',
-                                type: 'bar',
-                                itemStyle: {
-                                    color: 'rgba(0,0,0,0.05)'
-                                },
-                                barGap: '-100%',
-                                barCategoryGap: '40%',
-                                data: dataShadow,
-                                animation: false
-                            },
-                            {
-                                type: 'bar',
-                                itemStyle: {
-                                    color: new echarts.graphic.LinearGradient(
-                                        0, 0, 0, 1,
-                                        [
-                                            {offset: 0, color: '#83bff6'},
-                                            {offset: 0.5, color: '#188df0'},
-                                            {offset: 1, color: '#188df0'}
-                                        ]
-                                    )
-                                },
-                                emphasis: {
-                                    itemStyle: {
-                                        color: new echarts.graphic.LinearGradient(
-                                            0, 0, 0, 1,
-                                            [
-                                                {offset: 0, color: '#2378f7'},
-                                                {offset: 0.7, color: '#2378f7'},
-                                                {offset: 1, color: '#83bff6'}
-                                            ]
-                                        )
-                                    }
-                                },
-                                data: data
-                            }
-                        ]
-                    };
-                    // Enable data zoom when user click bar.
-                    var zoomSize = 6;
-                    myChart.on('click', function (params) {
-                        console.log(dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)]);
-                        myChart.dispatchAction({
-                            type: 'dataZoom',
-                            startValue: dataAxis[Math.max(params.dataIndex - zoomSize / 2, 0)],
-                            endValue: dataAxis[Math.min(params.dataIndex + zoomSize / 2, data.length - 1)]
-                        });
-                    });
-                // 使用刚指定的配置项和数据显示图表。
-                myChart.setOption(option);
-            </script>
-  </div>
-  <div id="section2" class="container-fluid" style="padding-top:70px;padding-bottom:70px">
-    <h5>项目经验</h5>
-    <p>学习项目</p>
-    <div class="container">
-      <table class="table table-striped table-hover">
-        <thead>
-          <tr>
-            <th>学习项目</th>
-            <th>涉及技术</th>
-            <th>所用时间</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>实现登录与注册</td>
-            <td>Eclipse:Spring,jdbc,MySQL,JSP(html5+css3+js),代码规范,git提交文件</td>
-            <td>30天</td>
-          </tr>
-          <tr>
-            <td>新能源汽车项目</td>
-            <td>Eclipse:SpringMVC,Ajax,Mybatis,MySQL,JSP,bootstrap3,Maven,Linux(云平台发布),百度地图SDK,头像上传和保存,分页</td>
-            <td>30天</td>
-          </tr>
-          <tr>
-            <td>Java入门案例汉化教学</td>
-            <td>IDE(分工完成):Java数组,翻译,Word文档编写,教学视频录制与剪辑</td>
-            <td>7天</td>
-          </tr>
-          <tr>
-            <td>岗位爬取并展示</td>
-            <td>IDEA(小组合作):Jsoup+HttpClient,WebMagic,MySQL,Echarts,Maven,jquery实现表头固定表格自滚动</td>
-            <td>20天</td>
-          </tr>
-          <tr>
-            <td>个人简历网站制作</td>
-            <td>VSCode(自我创新):bootstrap4,Echarts,Css3(透明-背景渐变色,背景渲染原理),邮我,滚动监听</td>
-            <td>10天</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div id="section3" class="container-fluid" style="padding-top:70px;padding-bottom:70px">
-    <div class="container" style="margin-top:30px">
-      <div class="row">
-        <div class="col-sm-4">
-          <h2>About Me</h2>
-          <h5>my photo:</h5>
-          <div class="fakeimg"><img src="http://m.qpic.cn/psc?/V13Oytc21Z27jf/UbDh**QEFrkBQEvKgeO0F2**NsUaYUQt6ZNsa9yJTFGXnFQvUvywpBoqvewxcnmSK190V6ysZSMru6fy5SdHpg!!/b&bo=OATcBzgE3AcRCT4!&rf=viewer_4" height="400px" width="350px"></div>
-            <p>特点:<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;身高190cm,喜欢日语,性格活泼,具有创新思维<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;吃苦耐劳,踏实肯干,服从团队管理,服从上级安排<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;在校期间有丰富的学生干部工作经验,可以很好地完成目标,并在此基础上进行创新
-            </p>
-          <h3>My CSDN</h3>
-          <ul class="nav nav-pills flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" target="_blank" href="https://blog.csdn.net/weixin_43701595">我的博客</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" target="_blank" href="https://blog.csdn.net/weixin_43701595/article/details/103630365">javaweb+mysql登录注册实现</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" href="https://blog.csdn.net/weixin_43701595/article/details/106332933">Java爬虫项目(一 爬取)(岗位爬取并展示)WebMagic+MySQL+Echarts+IDEA</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" href="https://blog.csdn.net/weixin_43701595/article/details/106436568">jquery实现表头固定表格自滚动</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" target="_blank" href="https://blog.csdn.net/weixin_43701595/article/details/106555648">html背景渲染原理(body透明渐变)</a>
-            </li> -->
-          </ul>
-          <div id="wmbq">
-            <a target="_blank" href="https://blog.csdn.net/weixin_43701595" title="·♪关于博客 - 个人资料 - 博客中心♪ ♩ ♫ ">我的博客</a>
-            <a target="_blank" href="https://blog.csdn.net/weixin_43701595/category_10088814.html" title="·♪项目经验(后端)♪ ♩ ♫ ">后端编写</a>
-            <a target="_blank" href="https://blog.csdn.net/weixin_43701595/category_10088816.html" title="·♪前端编写(推荐)♪ ♩ ♫ ">前端编写</a>
-            <a target="_blank" href="https://blog.csdn.net/weixin_43701595/category_10088807.html" title="·♪工具经验(杂)♪ ♩ ♫ ">工具经验</a>
-            
-            <a target="_blank" href="https://blog.csdn.net/weixin_43701595/article/details/106721033" title="·♪html怎样固定页面的高(固定容器高度 溢出隐藏)♪ ♩ ♫ ">页面高度固定</a>
-            <a target="_blank" href="https://blog.csdn.net/weixin_43701595/article/details/106615199" title="·♪Java爬虫项目(四 可视化)♪ ♩ ♫··· ">数据库可视化</a>
-            <a target="_blank" href="https://blog.csdn.net/weixin_43701595/article/details/106436568" title="·♪jquery实现表头固定表格自滚动♪ ♩ ♫ ">表格数据自滚动</a>
-            <a target="_blank" href="https://blog.csdn.net/weixin_43701595/article/details/104947857" title="·♪java超简单的环境变量 配置+详解♪ ♩ ♫ ">环境变量配置</a>
-            <a target="_blank" href="https://blog.csdn.net/weixin_43701595/article/details/106555648" title="·♪html背景渲染原理(body透明渐变)♪ ♩ ♫ ">背景渲染原理</a>
-            <a target="_blank" href="https://blog.csdn.net/weixin_43701595/article/details/103562081" title="·♪git教程(从安装到提交文件)♪ ♩ ♫ ">GitLab仓</a>
-            <a target="_blank" href="https://blog.csdn.net/weixin_43701595/article/details/103630365" title="·♪javaweb+mysql登录注册实现♪ ♩ ♫ ">登录注册实现</a>
-            
-            <a href="JavaScript:" title="·♪Java前端基础♪ ♩ ♫ ">Html5+Css3+JavaScript+Jquery</a>
-            <a href="JavaScript:" title="·♪Java前端进阶♪ ♩ ♫ ">bootstrap4+Echarts+WebMagic</a>
-            <a href="JavaScript:" title="·♪JavaWeb开发基础♪ ♩ ♫ ">Java EE(Spring MVC+Spring+MyBatis+Redis)</a>
-            <a href="JavaScript:" title="·♪JavaWeb后端进阶♪ ♩ ♫ ">SpringBoot</a>
-            <a href="JavaScript:" title="·♪系统+云平台发布♪ ♩ ♫ ">Windows7/10+Linux+云平台发布</a>
-            <a href="JavaScript:" title="·♪数据库♪ ♩ ♫ ">MySQL+MongoDB</a>
-            <a href="JavaScript:" title="·♪工具♪ ♩ ♫ ">office办公软件+Eclipse+idea+IDE+Vs Code</a>
-          </div>
-          <hr class="d-sm-none">
-        </div>
-        <div class="col-sm-8">
-          <h2>Look Me</h2>
-          <h5>基本信息</h5>
-          <div class="container">         
-            <table class="table table-striped table-hover">
-              <thead>
-                <tr>
-                  <th>政治面貌</th>
-                  <th>中共预备党员</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>学历</td>
-                  <td>大专</td>
-                </tr>
-                <tr>
-                  <td>校园经历</td>
-                  <td>因参加工坊培训辞职副班长,参加过校学生会,目前在校易班工作站技术部担任副部长</td>
-                </tr>
-                <tr>
-                  <td>获得荣誉</td>
-                  <td>国家励志奖学金,校内二等奖学金2次,优秀干部,优秀团员等,共九项校级荣誉证书</td>
-                </tr>
-                <tr>
-                  <td>掌握技能</td>
-                  <td>Java语言,前后端,Windows和linux的装机和使用,数据库应用,服务器配置,云平台发布</td>
-                </tr>
-                <tr>
-                  <td>自我评价</td>
-                  <td>熟练使用office等常用办公软件,善于沟通合作,良好的时间观念,高效的学习方式</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <br>
-          <h2>最新作品展示</h2>
-          <h5>岗位爬取并展示</h5>
-          <div class="fakeimg"><img src="https://img-blog.csdnimg.cn/20200608114511438.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcwMTU5NQ==,size_16,color_FFFFFF,t_70" alt="logo" style="width:100%;"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="section41" class="container-fluid" style="padding-top:70px;padding-bottom:70px">
-   <h5>教育经历</h5>
-   <p>教育履历</p>
-   <div class="container-fluid">
-    <div class="row">
-      <div class="col" style="background-color:#FFFAD0;">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>就读学校</th>
-              <th>学历</th>
-              <th>地点</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>实验中学</td>
-              <td>初中</td>
-              <td>陕西省渭南市合阳县</td>
-            </tr>
-            <tr>
-              <td>合阳中学</td>
-              <td>高中</td>
-              <td>陕西省渭南市合阳县</td>
-            </tr>
-            <tr>
-              <td>陕西国防学院</td>
-              <td>大专</td>
-              <td>陕西省西安市鄠邑区</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="col" style="background-color:#FFFAD0;">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>大学所学专业</th>
-              <th>时间</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>软件技术</td>
-              <td>大一</td>
-            </tr>
-            <tr>
-              <td>企业SaaS</td>
-              <td>大二</td>
-            </tr>
-            <tr>
-              <td>企业SaaS+实习期</td>
-              <td>大三</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="col" style="background-color:#FFFAD0;">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>未来规划</th>
-              <th>达成所需时长</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>初级程序员</td>
-              <td>毕业1-5年</td>
-            </tr>
-            <tr>
-              <td>项目主力</td>
-              <td>毕业6-10年</td>
-            </tr>
-            <tr>
-              <td>项目经理</td>
-              <td>毕业11-15年</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div id="section42" class="container-fluid" style="padding-top:70px;padding-bottom:70px">
-    <p>工作履历</p>
-
-    
-    
-  </div>
-  
-
-<div class="jumbotron text-center  bg-secondary" style="margin-bottom:0">
-  <div class="d-flex justify-content-center mb-3">
-    <div class="p-3">陕ICP备19021888号</div>
-    <div class="p-3">
-      <tr><td width="110">
-        <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=ahITDwkTW1lbXiobG0QJBQc" style="text-decoration:none;">
-        <img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_22.png"/></a>
-      </td></tr>
-    </div>
-  </div>
-</div>
-
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>源码：<a href="https://www.mycodes.net/146/9749.htm" target="_blank">源码之家</a></p>
+<p>GitHub：<a href="https://github.com/laddzhao/" target="_blank">https://github.com/laddzhao</a></p>
+<p>全部源码（复制保存.HTML文件）：</p>
+<p>&lt;!doctype html&gt;<br>
+  &lt;html&gt;<br>
+  &lt;head&gt;<br>
+  &lt;meta charset=&quot;utf-8&quot;&gt;<br>
+  &lt;title&gt;SVG自行车&lt;/title&gt;<br>
+  &lt;style&gt;<br>
+  g {<br>
+transform-box: fill-box;<br>
+}<br>
+g * {<br>
+transform-box: border-box;<br>
+}</p>
+<p>#bikechain {<br>
+  stroke-dasharray: 5 2;<br>
+  stroke-dashoffset: 300;<br>
+  animation: moveChain 4s linear infinite;<br>
+}</p>
+<p>@keyframes moveChain {<br>
+  to {<br>
+  stroke-dashoffset: 0;<br>
+  }<br>
+  }</p>
+<p>#crank {<br>
+  transform-origin: 50% 50% 0;<br>
+  }<br>
+  #left-arm {<br>
+  transform-origin: 50% 97% 0;<br>
+  }<br>
+  #right-arm {<br>
+  transform-origin: 50% 0% 0;<br>
+  }</p>
+<p>#left-arm,  #right-arm, #crank {<br>
+  -webkit-animation: rotate 4s linear infinite;<br>
+  -moz-animation: rotate 4s linear infinite;<br>
+  animation: rotate 4s linear infinite;<br>
+  }<br>
+</p>
+<p>#rear_wheel, #front_wheel {<br>
+  transform-origin: center;<br>
+  -webkit-animation: rotate 3s linear infinite;<br>
+  -moz-animation: rotate 3s linear infinite;<br>
+  animation: rotate 3s linear infinite;<br>
+  }</p>
+<p>@-webkit-keyframes rotate {<br>
+  from {-webkit-transform: rotate(0deg);}<br>
+  to {-webkit-transform: rotate(360deg);}<br>
+  }</p>
+<p>@-moz-keyframes rotate {<br>
+  from {-moz-transform: rotate(0deg);}<br>
+  to {-moz-transform: rotate(360deg);}<br>
+  }</p>
+<p>@keyframes rotate {<br>
+  from {transform: rotate(0deg);}<br>
+  to {transform: rotate(360deg);}<br>
+  }<br>
+</p>
+<p>#bike {<br>
+  display: flex; <br>
+  }</p>
+<p>#Layer_1 {<br>
+  margin-left: auto;<br>
+  margin-right: auto;<br>
+  width: 600px;<br>
+  height: 600px;<br>
+  }&lt;/style&gt;<br>
+  &lt;/head&gt;<br>
+  &lt;body&gt;<br>
+  &lt;div id=&quot;bike&quot;&gt;<br>
+  &lt;svg id=&quot;Layer_1&quot; data-name=&quot;Layer 1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; viewBox=&quot;0 0 1125.6 650.76&quot;&gt;<br>
+  &lt;defs&gt;<br>
+  &lt;style&gt;<br>
+  .cls-1 {<br>
+  fill: url(#linear-gradient);<br>
+  }</p>
+<p> .cls-2 {<br>
+  fill: url(#linear-gradient-2);<br>
+  }</p>
+<p> .cls-11, .cls-23, .cls-25, .cls-3, .cls-39, .cls-5, .cls-7, .cls-8 {<br>
+  fill: none;<br>
+  }</p>
+<p> .cls-3 {<br>
+  stroke: #ddb18d;<br>
+  stroke-width: 5px;<br>
+  }</p>
+<p> .cls-11, .cls-17, .cls-23, .cls-25, .cls-27, .cls-3, .cls-32, .cls-38, .cls-39, .cls-42, .cls-5, .cls-7, .cls-8 {<br>
+  stroke-miterlimit: 10;<br>
+  }</p>
+<p> .cls-4 {<br>
+  fill: url(#radial-gradient);<br>
+  }</p>
+<p> .cls-17, .cls-27, .cls-5, .cls-8 {<br>
+  stroke: #000;<br>
+  }</p>
+<p> .cls-6 {<br>
+  fill: url(#radial-gradient-2);<br>
+  }</p>
+<p> .cls-11, .cls-7 {<br>
+  stroke-width: 18px;<br>
+  }</p>
+<p> .cls-7 {<br>
+  stroke: url(#radial-gradient-3);<br>
+  }</p>
+<p> .cls-8 {<br>
+  stroke-width: 12px;<br>
+  }</p>
+<p> .cls-9 {<br>
+  fill: url(#radial-gradient-4);<br>
+  }</p>
+<p> .cls-10 {<br>
+  fill: url(#radial-gradient-5);<br>
+  }</p>
+<p> .cls-11 {<br>
+  stroke: url(#radial-gradient-6);<br>
+  }</p>
+<p> .cls-12 {<br>
+  fill: url(#linear-gradient-3);<br>
+  }</p>
+<p> .cls-13 {<br>
+  fill: url(#linear-gradient-4);<br>
+  }</p>
+<p> .cls-14 {<br>
+  fill: url(#linear-gradient-5);<br>
+  }</p>
+<p> .cls-15 {<br>
+  fill: url(#linear-gradient-6);<br>
+  }</p>
+<p> .cls-16 {<br>
+  fill: url(#linear-gradient-7);<br>
+  }</p>
+<p> .cls-17 {<br>
+  fill: #999;<br>
+  stroke-width: 0.5px;<br>
+  }</p>
+<p> .cls-18 {<br>
+  fill: url(#linear-gradient-8);<br>
+  }</p>
+<p> .cls-19 {<br>
+  fill: url(#linear-gradient-9);<br>
+  }</p>
+<p> .cls-20 {<br>
+  fill: url(#linear-gradient-10);<br>
+  }</p>
+<p> .cls-21 {<br>
+  fill: url(#linear-gradient-11);<br>
+  }</p>
+<p> .cls-22 {<br>
+  fill: url(#linear-gradient-12);<br>
+  }</p>
+<p> .cls-23 {<br>
+  stroke-width: 20px;<br>
+  stroke: url(#linear-gradient-13);<br>
+  }</p>
+<p> .cls-24 {<br>
+  fill: url(#linear-gradient-14);<br>
+  }</p>
+<p> .cls-25 {<br>
+  stroke: #4d4d4d;<br>
+  }</p>
+<p> .cls-25, .cls-27, .cls-32 {<br>
+  stroke-width: 0.25px;<br>
+  }</p>
+<p> .cls-26 {<br>
+  fill: url(#linear-gradient-15);<br>
+  }</p>
+<p> .cls-27 {<br>
+  fill: url(#linear-gradient-16);<br>
+  }</p>
+<p> .cls-28 {<br>
+  fill: url(#linear-gradient-17);<br>
+  }</p>
+<p> .cls-29 {<br>
+  fill: url(#linear-gradient-18);<br>
+  }</p>
+<p> .cls-30 {<br>
+  fill: url(#linear-gradient-19);<br>
+  }</p>
+<p> .cls-31 {<br>
+  fill: url(#radial-gradient-7);<br>
+  }</p>
+<p> .cls-32, .cls-39 {<br>
+  stroke: #333;<br>
+  }</p>
+<p> .cls-32 {<br>
+  fill: url(#linear-gradient-20);<br>
+  }</p>
+<p> .cls-33 {<br>
+  fill: url(#linear-gradient-21);<br>
+  }</p>
+<p> .cls-34 {<br>
+  fill: url(#linear-gradient-22);<br>
+  }</p>
+<p> .cls-35 {<br>
+  fill: url(#radial-gradient-8);<br>
+  }</p>
+<p> .cls-36 {<br>
+  fill: #232121;<br>
+  }</p>
+<p> .cls-37 {<br>
+  fill: url(#radial-gradient-9);<br>
+  }</p>
+<p> .cls-38 {<br>
+  fill: #666;<br>
+  stroke: #1a1a1a;<br>
+  }</p>
+<p> .cls-39 {<br>
+  stroke-width: 4px;<br>
+  }</p>
+<p> .cls-40 {<br>
+  fill: url(#linear-gradient-23);<br>
+  }</p>
+<p> .cls-41 {<br>
+  fill: url(#linear-gradient-24);<br>
+  }</p>
+<p> .cls-42 {<br>
+  fill: url(#radial-gradient-10);<br>
+  stroke: url(#radial-gradient-11);<br>
+  }<br>
+  &lt;/style&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient&quot; x1=&quot;2269.23&quot; y1=&quot;148.43&quot; x2=&quot;2286.23&quot; y2=&quot;148.43&quot; gradientTransform=&quot;matrix(-1, 0, 0, 1, 2782.43, 252.03)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.02&quot; stop-color=&quot;#434343&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.04&quot; stop-color=&quot;#454545&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.51&quot; stop-color=&quot;#7c7c7c&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.6&quot; stop-color=&quot;#6d6d6d&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.86&quot; stop-color=&quot;#454545&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#363636&quot;/&gt;<br>
+  &lt;/linearGradient&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-2&quot; x1=&quot;2259.85&quot; y1=&quot;95.53&quot; x2=&quot;2295.72&quot; y2=&quot;95.53&quot; gradientTransform=&quot;matrix(-1, 0, 0, 1, 2811.43, 385.97)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.02&quot; stop-color=&quot;#222&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.11&quot; stop-color=&quot;#262626&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.2&quot; stop-color=&quot;#333&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.29&quot; stop-color=&quot;#484848&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.39&quot; stop-color=&quot;#666&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.49&quot; stop-color=&quot;#8c8c8c&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.51&quot; stop-color=&quot;#969696&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.57&quot; stop-color=&quot;#838383&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.69&quot; stop-color=&quot;#606060&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.81&quot; stop-color=&quot;#474747&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.91&quot; stop-color=&quot;#373737&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#323232&quot;/&gt;<br>
+  &lt;/linearGradient&gt;<br>
+  &lt;radialGradient id=&quot;radial-gradient&quot; cx=&quot;261.5&quot; cy=&quot;544.9&quot; r=&quot;24.43&quot; gradientTransform=&quot;translate(0 8)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.25&quot; stop-color=&quot;gray&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.26&quot; stop-color=&quot;#838383&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.43&quot; stop-color=&quot;#ababab&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.57&quot; stop-color=&quot;#c3c3c3&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.65&quot; stop-color=&quot;#ccc&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.73&quot; stop-color=&quot;#c9c9c9&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.79&quot; stop-color=&quot;#bfbfbf&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.84&quot; stop-color=&quot;#aeaeae&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.9&quot; stop-color=&quot;#979797&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.94&quot; stop-color=&quot;#797979&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.99&quot; stop-color=&quot;#545454&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#4d4d4d&quot;/&gt;<br>
+  &lt;/radialGradient&gt;<br>
+  &lt;radialGradient id=&quot;radial-gradient-2&quot; cx=&quot;261.55&quot; cy=&quot;552.46&quot; r=&quot;33.24&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0&quot; stop-color=&quot;#969696&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.12&quot; stop-color=&quot;#8e8e8e&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.31&quot; stop-color=&quot;#777&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.54&quot; stop-color=&quot;#515151&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.71&quot; stop-color=&quot;#323232&quot;/&gt;<br>
+  &lt;/radialGradient&gt;<br>
+  &lt;radialGradient id=&quot;radial-gradient-3&quot; cx=&quot;260.9&quot; cy=&quot;544.9&quot; r=&quot;215.1&quot; gradientTransform=&quot;translate(-29 -125.94)&quot; xlink:href=&quot;#radial-gradient&quot;/&gt;<br>
+  &lt;radialGradient id=&quot;radial-gradient-4&quot; cx=&quot;922.9&quot; cy=&quot;544.6&quot; r=&quot;15.47&quot; gradientTransform=&quot;translate(-29 -125.94)&quot; xlink:href=&quot;#radial-gradient&quot;/&gt;<br>
+  &lt;radialGradient id=&quot;radial-gradient-5&quot; cx=&quot;922.9&quot; cy=&quot;544.6&quot; r=&quot;24.43&quot; xlink:href=&quot;#radial-gradient&quot;/&gt;<br>
+  &lt;radialGradient id=&quot;radial-gradient-6&quot; cx=&quot;922.9&quot; cy=&quot;544.6&quot; r=&quot;215.1&quot; gradientTransform=&quot;translate(-29 -125.94)&quot; xlink:href=&quot;#radial-gradient&quot;/&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-3&quot; x1=&quot;887.88&quot; y1=&quot;491.86&quot; x2=&quot;901.46&quot; y2=&quot;485.24&quot; gradientTransform=&quot;translate(0 8)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.25&quot; stop-color=&quot;#00d9d9&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.51&quot; stop-color=&quot;#00f1f1&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.68&quot; stop-color=&quot;#00fcfc&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#00cfcf&quot;/&gt;<br>
+  &lt;/linearGradient&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-4&quot; x1=&quot;839.87&quot; y1=&quot;374.83&quot; x2=&quot;857.27&quot; y2=&quot;369.51&quot; gradientTransform=&quot;translate(0 8)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.25&quot; stop-color=&quot;#00d9d9&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.68&quot; stop-color=&quot;#00fcfc&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.75&quot; stop-color=&quot;#00f0f0&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.9&quot; stop-color=&quot;#00d8d8&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#00cfcf&quot;/&gt;<br>
+  &lt;/linearGradient&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-5&quot; x1=&quot;792.43&quot; y1=&quot;213.57&quot; x2=&quot;809.66&quot; y2=&quot;208.3&quot; gradientTransform=&quot;translate(-29 -125.94)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0&quot; stop-color=&quot;#313131&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.69&quot; stop-color=&quot;#7d7d7d&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.93&quot; stop-color=&quot;#bababa&quot;/&gt;<br>
+  &lt;/linearGradient&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-6&quot; x1=&quot;778.39&quot; y1=&quot;204.04&quot; x2=&quot;812.46&quot; y2=&quot;204.04&quot; gradientTransform=&quot;translate(0 8)&quot; xlink:href=&quot;#linear-gradient-5&quot;/&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-7&quot; x1=&quot;805.73&quot; y1=&quot;194.1&quot; x2=&quot;862.11&quot; y2=&quot;194.1&quot; gradientTransform=&quot;translate(0 8)&quot; xlink:href=&quot;#linear-gradient-5&quot;/&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-8&quot; x1=&quot;487.65&quot; y1=&quot;419.82&quot; x2=&quot;508.32&quot; y2=&quot;415.04&quot; gradientTransform=&quot;translate(0 8)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.25&quot; stop-color=&quot;#00d9d9&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.39&quot; stop-color=&quot;#1ce4e4&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.72&quot; stop-color=&quot;#5dfcfc&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.77&quot; stop-color=&quot;#49f2f2&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.87&quot; stop-color=&quot;#21dfdf&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.95&quot; stop-color=&quot;#09d3d3&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#00cfcf&quot;/&gt;<br>
+  &lt;/linearGradient&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-9&quot; x1=&quot;644.26&quot; y1=&quot;274.89&quot; x2=&quot;643.14&quot; y2=&quot;249.35&quot; xlink:href=&quot;#linear-gradient-4&quot;/&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-10&quot; x1=&quot;671.58&quot; y1=&quot;409.19&quot; x2=&quot;692.02&quot; y2=&quot;428.93&quot; xlink:href=&quot;#linear-gradient-4&quot;/&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-11&quot; x1=&quot;361.28&quot; y1=&quot;401.72&quot; x2=&quot;370.92&quot; y2=&quot;408.6&quot; xlink:href=&quot;#linear-gradient-4&quot;/&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-12&quot; x1=&quot;412.62&quot; y1=&quot;545.75&quot; x2=&quot;412.62&quot; y2=&quot;584.22&quot; xlink:href=&quot;#linear-gradient-4&quot;/&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-13&quot; x1=&quot;808.46&quot; y1=&quot;271.56&quot; x2=&quot;828.18&quot; y2=&quot;265.53&quot; gradientTransform=&quot;translate(-29 -125.94)&quot; xlink:href=&quot;#linear-gradient-4&quot;/&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-14&quot; x1=&quot;817.31&quot; y1=&quot;308.07&quot; x2=&quot;840.45&quot; y2=&quot;299.64&quot; gradientTransform=&quot;translate(0 8)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.25&quot; stop-color=&quot;#5e5e5e&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.4&quot; stop-color=&quot;#838383&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.59&quot; stop-color=&quot;#ababab&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.74&quot; stop-color=&quot;#c3c3c3&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.83&quot; stop-color=&quot;#ccc&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.86&quot; stop-color=&quot;#acacac&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.9&quot; stop-color=&quot;#858585&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.94&quot; stop-color=&quot;#696969&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.98&quot; stop-color=&quot;#575757&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#515151&quot;/&gt;<br>
+  &lt;/linearGradient&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-15&quot; x1=&quot;795.39&quot; y1=&quot;235.86&quot; x2=&quot;818.66&quot; y2=&quot;227.39&quot; gradientTransform=&quot;translate(0 8)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.25&quot; stop-color=&quot;#5e5e5e&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.41&quot; stop-color=&quot;#838383&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.61&quot; stop-color=&quot;#ababab&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.77&quot; stop-color=&quot;#c3c3c3&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.87&quot; stop-color=&quot;#ccc&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.89&quot; stop-color=&quot;#acacac&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.93&quot; stop-color=&quot;#858585&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.96&quot; stop-color=&quot;#696969&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.98&quot; stop-color=&quot;#575757&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#515151&quot;/&gt;<br>
+  &lt;/linearGradient&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-16&quot; x1=&quot;255&quot; y1=&quot;540.97&quot; x2=&quot;298.07&quot; y2=&quot;540.97&quot; gradientTransform=&quot;translate(0 8)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.25&quot; stop-color=&quot;#999&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.38&quot; stop-color=&quot;#b6b6b6&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.58&quot; stop-color=&quot;#dedede&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.73&quot; stop-color=&quot;#f6f6f6&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.83&quot; stop-color=&quot;#fff&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.85&quot; stop-color=&quot;#dfdfdf&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.89&quot; stop-color=&quot;#adadad&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.92&quot; stop-color=&quot;#858585&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.95&quot; stop-color=&quot;#696969&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.98&quot; stop-color=&quot;#575757&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#515151&quot;/&gt;<br>
+  &lt;/linearGradient&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-17&quot; x1=&quot;409.81&quot; y1=&quot;224.08&quot; x2=&quot;457.11&quot; y2=&quot;212.28&quot; gradientTransform=&quot;translate(0 8)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.25&quot; stop-color=&quot;gray&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.27&quot; stop-color=&quot;#838383&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.5&quot; stop-color=&quot;#ababab&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.69&quot; stop-color=&quot;#c3c3c3&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.8&quot; stop-color=&quot;#ccc&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.85&quot; stop-color=&quot;#dbdbdb&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.94&quot; stop-color=&quot;#ececec&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#f2f2f2&quot;/&gt;<br>
+  &lt;/linearGradient&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-18&quot; x1=&quot;352.7&quot; y1=&quot;157.2&quot; x2=&quot;496.8&quot; y2=&quot;157.2&quot; gradientTransform=&quot;translate(0 8)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.25&quot; stop-color=&quot;#999&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.33&quot; stop-color=&quot;#a9a9a9&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.55&quot; stop-color=&quot;#d1d1d1&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.72&quot; stop-color=&quot;#e9e9e9&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.83&quot; stop-color=&quot;#f2f2f2&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.84&quot; stop-color=&quot;#dfdfdf&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.88&quot; stop-color=&quot;#adadad&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.92&quot; stop-color=&quot;#858585&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.95&quot; stop-color=&quot;#696969&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.98&quot; stop-color=&quot;#575757&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#515151&quot;/&gt;<br>
+  &lt;/linearGradient&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-19&quot; x1=&quot;333.65&quot; y1=&quot;148.75&quot; x2=&quot;515.25&quot; y2=&quot;148.75&quot; gradientTransform=&quot;translate(0 8)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.25&quot; stop-color=&quot;#4a211b&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.33&quot; stop-color=&quot;#4a231d&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.83&quot; stop-color=&quot;#482b26&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.87&quot; stop-color=&quot;#542f1f&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.94&quot; stop-color=&quot;#653416&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#6b3612&quot;/&gt;<br>
+  &lt;/linearGradient&gt;<br>
+  &lt;radialGradient id=&quot;radial-gradient-7&quot; cx=&quot;501.06&quot; cy=&quot;148.26&quot; r=&quot;4.28&quot; gradientTransform=&quot;translate(-29 -125.94)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.19&quot; stop-color=&quot;#de8642&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.39&quot; stop-color=&quot;#d98341&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.61&quot; stop-color=&quot;#cc7b3c&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.85&quot; stop-color=&quot;#b56d36&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#a36230&quot;/&gt;<br>
+  &lt;/radialGradient&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-20&quot; x1=&quot;480.51&quot; y1=&quot;264.32&quot; x2=&quot;443.58&quot; y2=&quot;274.22&quot; gradientTransform=&quot;translate(0 8)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.25&quot; stop-color=&quot;#5e5e5e&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.29&quot; stop-color=&quot;#888&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.34&quot; stop-color=&quot;#b0b0b0&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.38&quot; stop-color=&quot;#c8c8c8&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.4&quot; stop-color=&quot;#d1d1d1&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.52&quot; stop-color=&quot;#acacac&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.66&quot; stop-color=&quot;#858585&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.8&quot; stop-color=&quot;#686868&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.91&quot; stop-color=&quot;#575757&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#515151&quot;/&gt;<br>
+  &lt;/linearGradient&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-21&quot; x1=&quot;842.79&quot; y1=&quot;237.64&quot; x2=&quot;932.18&quot; y2=&quot;237.64&quot; gradientTransform=&quot;translate(0 8)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0.07&quot; stop-color=&quot;#603813&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.67&quot; stop-color=&quot;#603813&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot; stop-color=&quot;#361f0a&quot;/&gt;<br>
+  &lt;/linearGradient&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-22&quot; x1=&quot;842.1&quot; y1=&quot;239.95&quot; x2=&quot;957.82&quot; y2=&quot;239.95&quot; xlink:href=&quot;#linear-gradient-21&quot;/&gt;<br>
+  &lt;radialGradient id=&quot;radial-gradient-8&quot; cx=&quot;533.7&quot; cy=&quot;223.6&quot; r=&quot;45.68&quot; gradientTransform=&quot;matrix(1, 0, 0, -1, 0, 808)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0&quot; stop-color=&quot;#fff&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.12&quot; stop-color=&quot;#fbfbfb&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.25&quot; stop-color=&quot;#eee&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.37&quot; stop-color=&quot;#dadada&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.5&quot; stop-color=&quot;#bdbdbd&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.63&quot; stop-color=&quot;#979797&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.76&quot; stop-color=&quot;#696969&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.89&quot; stop-color=&quot;#343434&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot;/&gt;<br>
+  &lt;/radialGradient&gt;<br>
+  &lt;radialGradient id=&quot;radial-gradient-9&quot; cx=&quot;533.65&quot; cy=&quot;223.6&quot; r=&quot;70.81&quot; gradientTransform=&quot;matrix(1, 0, 0, -1, 0, 808)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0&quot; stop-color=&quot;#fff&quot;/&gt;<br>
+  &lt;stop offset=&quot;1&quot;/&gt;<br>
+  &lt;/radialGradient&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-23&quot; x1=&quot;525.15&quot; y1=&quot;171&quot; x2=&quot;542.15&quot; y2=&quot;171&quot; gradientTransform=&quot;matrix(1, 0, 0, -1, -29, 674.06)&quot; xlink:href=&quot;#linear-gradient&quot;/&gt;<br>
+  &lt;linearGradient id=&quot;linear-gradient-24&quot; x1=&quot;515.8&quot; y1=&quot;118.1&quot; x2=&quot;551.67&quot; y2=&quot;118.1&quot; gradientTransform=&quot;matrix(1, 0, 0, -1, 0, 808)&quot; xlink:href=&quot;#linear-gradient-2&quot;/&gt;<br>
+  &lt;radialGradient id=&quot;radial-gradient-10&quot; cx=&quot;533.72&quot; cy=&quot;223.6&quot; r=&quot;8.33&quot; gradientTransform=&quot;matrix(1, 0, 0, -1, -29, 674.06)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0&quot; stop-color=&quot;#fff&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.02&quot; stop-color=&quot;#e8e8e8&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.07&quot; stop-color=&quot;#b8b8b8&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.13&quot; stop-color=&quot;#8c8c8c&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.19&quot; stop-color=&quot;#666&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.25&quot; stop-color=&quot;#464646&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.32&quot; stop-color=&quot;#2d2d2d&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.39&quot; stop-color=&quot;#191919&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.48&quot; stop-color=&quot;#0b0b0b&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.58&quot; stop-color=&quot;#020202&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.77&quot;/&gt;<br>
+  &lt;/radialGradient&gt;<br>
+  &lt;radialGradient id=&quot;radial-gradient-11&quot; cx=&quot;533.7&quot; cy=&quot;223.6&quot; r=&quot;8.84&quot; gradientTransform=&quot;matrix(1, 0, 0, -1, -29, 674.06)&quot; gradientUnits=&quot;userSpaceOnUse&quot;&gt;<br>
+  &lt;stop offset=&quot;0&quot; stop-color=&quot;#fff&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.07&quot; stop-color=&quot;#f9f9f9&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.17&quot; stop-color=&quot;#e9e9e9&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.28&quot; stop-color=&quot;#cfcfcf&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.39&quot; stop-color=&quot;#aaa&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.51&quot; stop-color=&quot;#7b7b7b&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.64&quot; stop-color=&quot;#424242&quot;/&gt;<br>
+  &lt;stop offset=&quot;0.77&quot;/&gt;<br>
+  &lt;/radialGradient&gt;<br>
+  &lt;/defs&gt;<br>
+  &lt;title&gt;bike25t&lt;/title&gt;<br>
+  &lt;g id=&quot;left-arm&quot;&gt;<br>
+  &lt;polygon id=&quot;crank-arm&quot; class=&quot;cls-1&quot; points=&quot;501.1 347.56 508.2 347.56 513.2 453.36 496.2 453.36 501.1 347.56&quot;/&gt;<br>
+  &lt;path id=&quot;pedal&quot; class=&quot;cls-2&quot; d=&quot;M519.7,477.5h27.8a4,4,0,0,1,4,4h0a4,4,0,0,1-4,4H519.7a4,4,0,0,1-4-4h0A4,4,0,0,1,519.7,477.5Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;g id=&quot;rear_wheel&quot;&gt;<br>
+  &lt;circle class=&quot;cls-3&quot; cx=&quot;232.5&quot; cy=&quot;418.86&quot; r=&quot;217.6&quot;/&gt;<br>
+  &lt;g id=&quot;hub&quot;&gt;<br>
+  &lt;path class=&quot;cls-4&quot; d=&quot;M261.5,577.4A24.5,24.5,0,1,1,286,552.9,24.54,24.54,0,0,1,261.5,577.4Zm0-30.9A6.5,6.5,0,1,0,268,553,6.49,6.49,0,0,0,261.5,546.5Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;g id=&quot;spokes&quot;&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;232.5&quot; y2=&quot;619.66&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;309.3&quot; y2=&quot;604.36&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;374.4&quot; y2=&quot;560.86&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;417.9&quot; y2=&quot;495.76&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;433.2&quot; y2=&quot;418.96&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;417.9&quot; y2=&quot;342.26&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;374.4&quot; y2=&quot;277.16&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;309.3&quot; y2=&quot;233.66&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;232.5&quot; y2=&quot;218.36&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;155.7&quot; y2=&quot;233.66&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;90.6&quot; y2=&quot;277.16&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;47.1&quot; y2=&quot;342.26&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;31.8&quot; y2=&quot;418.96&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;47.1&quot; y2=&quot;495.76&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;90.6&quot; y2=&quot;560.86&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;232.5&quot; y1=&quot;418.96&quot; x2=&quot;155.7&quot; y2=&quot;604.36&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;path class=&quot;cls-6&quot; d=&quot;M266.47,585.12l-3.17-4.33a0.66,0.66,0,0,0-1.09,0l-2.82,4.56a0.66,0.66,0,0,1-1.17-.1l-2-5a0.66,0.66,0,0,0-1.07-.23l-3.87,3.72a0.66,0.66,0,0,1-1.11-.39l-0.7-5.32a0.66,0.66,0,0,0-1-.49l-4.67,2.64a0.66,0.66,0,0,1-1-.65l0.65-5.33a0.66,0.66,0,0,0-.83-0.72l-5.18,1.4a0.66,0.66,0,0,1-.79-0.88l2-5a0.66,0.66,0,0,0-.62-0.9l-5.37.06a0.66,0.66,0,0,1-.54-1l3.14-4.35a0.66,0.66,0,0,0-.38-1l-5.21-1.27a0.66,0.66,0,0,1-.27-1.15l4.12-3.44a0.66,0.66,0,0,0-.11-1.09l-4.73-2.53a0.66,0.66,0,0,1,0-1.18l4.85-2.31a0.66,0.66,0,0,0,.16-1.08l-4-3.63a0.66,0.66,0,0,1,.32-1.13l5.27-1a0.66,0.66,0,0,0,.43-1l-2.93-4.5a0.66,0.66,0,0,1,.59-1l5.36,0.31a0.66,0.66,0,0,0,.66-0.87l-1.72-5.08a0.66,0.66,0,0,1,.83-0.84l5.11,1.64a0.66,0.66,0,0,0,.86-0.68l-0.4-5.35a0.66,0.66,0,0,1,1-.61l4.54,2.86a0.66,0.66,0,0,0,1-.44l0.94-5.28a0.66,0.66,0,0,1,1.13-.34l3.69,3.9a0.66,0.66,0,0,0,1.08-.18l2.23-4.88a0.66,0.66,0,0,1,1.18,0l2.61,4.69a0.66,0.66,0,0,0,1.09.09l3.37-4.17a0.66,0.66,0,0,1,1.15.25l1.36,5.19a0.66,0.66,0,0,0,1,.36l4.3-3.21a0.66,0.66,0,0,1,1.05.53l0,5.37a0.66,0.66,0,0,0,.91.61l5-2a0.66,0.66,0,0,1,.89.77l-1.31,5.2a0.66,0.66,0,0,0,.73.81l5.32-.74a0.66,0.66,0,0,1,.67,1L286.51,539a0.66,0.66,0,0,0,.5,1l5.33,0.61a0.66,0.66,0,0,1,.41,1.1l-3.66,3.93a0.66,0.66,0,0,0,.25,1.07l5,1.92a0.66,0.66,0,0,1,.12,1.17L290,552.63a0.66,0.66,0,0,0,0,1.09l4.38,3.1a0.66,0.66,0,0,1-.17,1.16l-5.1,1.68a0.66,0.66,0,0,0-.3,1.05l3.47,4.09a0.66,0.66,0,0,1-.46,1.08l-5.35.36a0.66,0.66,0,0,0-.55.95l2.34,4.83a0.66,0.66,0,0,1-.71.94l-5.28-1a0.66,0.66,0,0,0-.77.78L282.5,578a0.66,0.66,0,0,1-.92.73l-4.86-2.26a0.66,0.66,0,0,0-.94.56l-0.27,5.36a0.66,0.66,0,0,1-1.08.48l-4.15-3.4a0.66,0.66,0,0,0-1,.31l-1.6,5.12A0.66,0.66,0,0,1,266.47,585.12Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;circle id=&quot;rim&quot; class=&quot;cls-7&quot; cx=&quot;231.9&quot; cy=&quot;418.96&quot; r=&quot;206.1&quot;/&gt;<br>
+  &lt;circle id=&quot;tire&quot; class=&quot;cls-8&quot; cx=&quot;231.7&quot; cy=&quot;419.06&quot; r=&quot;225.7&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;g id=&quot;front_wheel&quot;&gt;<br>
+  &lt;circle class=&quot;cls-3&quot; cx=&quot;893.9&quot; cy=&quot;417.56&quot; r=&quot;217.6&quot;/&gt;<br>
+  &lt;g id=&quot;spokes-2&quot; data-name=&quot;spokes&quot;&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;893.9&quot; y2=&quot;619.36&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;970.7&quot; y2=&quot;604.06&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;1035.8&quot; y2=&quot;560.56&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;1079.3&quot; y2=&quot;495.46&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;1094.5&quot; y2=&quot;418.76&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;1079.3&quot; y2=&quot;341.96&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;1035.8&quot; y2=&quot;276.86&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;970.7&quot; y2=&quot;233.36&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;893.9&quot; y2=&quot;218.06&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;817.1&quot; y2=&quot;233.36&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;752&quot; y2=&quot;276.86&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;708.5&quot; y2=&quot;341.96&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;693.2&quot; y2=&quot;418.76&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;708.5&quot; y2=&quot;495.46&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;752&quot; y2=&quot;560.56&quot;/&gt;<br>
+  &lt;line class=&quot;cls-5&quot; x1=&quot;893.9&quot; y1=&quot;418.76&quot; x2=&quot;817.1&quot; y2=&quot;604.06&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;g id=&quot;hub-2&quot; data-name=&quot;hub&quot;&gt;<br>
+  &lt;circle class=&quot;cls-9&quot; cx=&quot;893.9&quot; cy=&quot;418.66&quot; r=&quot;15.5&quot;/&gt;<br>
+  &lt;path class=&quot;cls-10&quot; d=&quot;M922.9,577.1a24.5,24.5,0,1,1,24.5-24.5A24.54,24.54,0,0,1,922.9,577.1Zm0-30.9a6.5,6.5,0,1,0,6.5,6.5A6.49,6.49,0,0,0,922.9,546.2Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;circle id=&quot;rim-2&quot; data-name=&quot;rim&quot; class=&quot;cls-11&quot; cx=&quot;893.9&quot; cy=&quot;418.66&quot; r=&quot;206.1&quot;/&gt;<br>
+  &lt;circle id=&quot;tire-2&quot; data-name=&quot;tire&quot; class=&quot;cls-8&quot; cx=&quot;893.9&quot; cy=&quot;418.66&quot; r=&quot;225.7&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;g id=&quot;frame&quot;&gt;<br>
+  &lt;g id=&quot;fork&quot;&gt;<br>
+  &lt;path class=&quot;cls-12&quot; d=&quot;M924.2,546.2s-27.7-61-42.4-91a190.94,190.94,0,0,1-8.2-19.2c-3.6,4.6-9.6,4.1-12.2,9.5C882.1,484.8,916.9,548,916.9,548c2.1,3.3,4.7,6.7,8,4.6h0C927.2,551.4,925.6,548.5,924.2,546.2Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;path class=&quot;cls-13&quot; d=&quot;M868.7,421.2L837.1,311.5l-15.3,4.6,11.9,46.5c1.1,3.8,20.7,69.9,28.8,85.4,0.5,1-1.7-3.4-1.1-2.3,2.6-5.4,8.6-4.9,12.2-9.5C871.8,431.2,870.1,426.2,868.7,421.2Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;polygon class=&quot;cls-14&quot; points=&quot;769.8 108.56 757 66.76 774.2 61.46 787 103.26 769.8 108.56&quot;/&gt;<br>
+  &lt;path class=&quot;cls-15&quot; d=&quot;M805.8,197a3,3,0,0,1-1.8-1.7c-0.1-.2-0.2-0.3-0.4-0.2l-17.3,5.1a2.12,2.12,0,0,0-1.3,3,0.25,0.25,0,0,1-.2.4l-4.3,1.6c-1.5.2-2.4,2.8-2.2,4.4h0a0.9,0.9,0,0,0,.1.5,4.47,4.47,0,0,0,5.5,3.2l3.1-.8a0.52,0.52,0,0,1,.4.2l2.3,6.3a6.37,6.37,0,0,1-1.4.8l-1.8.9a4.63,4.63,0,0,0-2.4,5.6v0.1a3.7,3.7,0,0,0,4.5,2.5l3.3-.9,17.5-5.4a2.62,2.62,0,0,0,1.8-3.1h0l1.3-.2a28.49,28.49,0,0,1-6.4-22.1A0.77,0.77,0,0,0,805.8,197Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;path class=&quot;cls-16&quot; d=&quot;M861.8,206.7l-6.2-.2a11.11,11.11,0,0,1-8.1-3.8,6.57,6.57,0,0,1-1-7.2,13.57,13.57,0,0,1,3.2-4.3l8.5-4.4-0.5-2-12.8,2.1-2.5,4.3L807,197a3.35,3.35,0,0,1-1,0,29.17,29.17,0,0,0,6.4,22.4l28.5-5,2.1,1.2a12,12,0,0,0,8.7,1.2l8.3-2.2a2.81,2.81,0,0,0,2.1-2.9Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;circle class=&quot;cls-17&quot; cx=&quot;758.6&quot; cy=&quot;91.06&quot; r=&quot;1.9&quot;/&gt;<br>
+  &lt;circle class=&quot;cls-17&quot; cx=&quot;753.3&quot; cy=&quot;75.16&quot; r=&quot;1.9&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;path id=&quot;seat_tube&quot; data-name=&quot;seat tube&quot; class=&quot;cls-18&quot; d=&quot;M525,584.4L452.9,277.3a6.52,6.52,0,0,1,4.9-7.8l13.2-3,73.6,313.3Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;path id=&quot;toptube&quot; class=&quot;cls-19&quot; d=&quot;M821.3,262.1a16.47,16.47,0,0,0-16.7-11.8L466,266.7h-0.4c3.8,5.2.2,10.3,4.1,15.4l337.2-15c0.6,0,2.9,4,4.7,8.4a80.27,80.27,0,0,0,9.7-13.4h0Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;path id=&quot;downtube&quot; class=&quot;cls-20&quot; d=&quot;M821.3,262.1a86,86,0,0,1-9.8,13.5c1.8,4.3,3,9,1.6,10.4L538.6,568q0.6,10.95,1.5,21.9a12.55,12.55,0,0,0,3.8-2.5L820.4,304a25.31,25.31,0,0,0,6.1-24.6Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;path id=&quot;seatstay&quot; class=&quot;cls-21&quot; d=&quot;M280.3,539.2L457.8,294.8s-1.1-18.9-4.3-14.4L269.2,539.1C267,542.2,277.6,543,280.3,539.2Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;path id=&quot;chainstay&quot; class=&quot;cls-22&quot; d=&quot;M538.6,568l-1.5,1.6c-2.6,2.6-6.8,7.9-10.4,7.4L287.2,553.7c-5.8-.7,1.6,11.6,4.2,11.9l235.2,26.5c0.8,0.1,8.2.2,13.6-2.2C539.5,582.7,539,575.3,538.6,568Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;g id=&quot;head_tube&quot; data-name=&quot;head tube&quot;&gt;<br>
+  &lt;line class=&quot;cls-23&quot; x1=&quot;778.4&quot; y1=&quot;105.96&quot; x2=&quot;800.2&quot; y2=&quot;179.26&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;g id=&quot;headset&quot;&gt;<br>
+  &lt;g id=&quot;headset-2&quot; data-name=&quot;headset&quot;&gt;<br>
+  &lt;g&gt;<br>
+  &lt;path class=&quot;cls-24&quot; d=&quot;M838.1,305.7l-20.5,6.1a1.58,1.58,0,0,0-1.1,2h0a5.2,5.2,0,0,0,6.4,3.5l13.7-4.1a5.2,5.2,0,0,0,3.5-6.4h0A1.51,1.51,0,0,0,838.1,305.7Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;path class=&quot;cls-25&quot; d=&quot;M838.1,305.7l-20.5,6.1a1.58,1.58,0,0,0-1.1,2h0a5.2,5.2,0,0,0,6.4,3.5l13.7-4.1a5.2,5.2,0,0,0,3.5-6.4h0A1.51,1.51,0,0,0,838.1,305.7Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;rect x=&quot;816.52&quot; y=&quot;311.51&quot; width=&quot;24.7&quot; height=&quot;1&quot; transform=&quot;translate(-83.51 114.76) rotate(-16.53)&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;g id=&quot;headset-3&quot; data-name=&quot;headset&quot;&gt;<br>
+  &lt;g&gt;<br>
+  &lt;path class=&quot;cls-26&quot; d=&quot;M798.1,246.9l20.5-6.1a1.58,1.58,0,0,0,1.1-2l-0.7-2.2a5.2,5.2,0,0,0-6.4-3.5l-13.7,4.1a5.2,5.2,0,0,0-3.5,6.4l0.7,2.2A1.58,1.58,0,0,0,798.1,246.9Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;path class=&quot;cls-25&quot; d=&quot;M798.1,246.9l20.5-6.1a1.58,1.58,0,0,0,1.1-2l-0.7-2.2a5.2,5.2,0,0,0-6.4-3.5l-13.7,4.1a5.2,5.2,0,0,0-3.5,6.4l0.7,2.2A1.58,1.58,0,0,0,798.1,246.9Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;rect x=&quot;794.72&quot; y=&quot;238.71&quot; width=&quot;24.7&quot; height=&quot;1.3&quot; transform=&quot;translate(-63.75 105.56) rotate(-16.53)&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;path id=&quot;rear_fork_end&quot; data-name=&quot;rear fork end&quot; class=&quot;cls-27&quot; d=&quot;M272.3,535.5l-5,4-7.9,2.4a4.47,4.47,0,0,0-3.2,4.2v0.6a1.56,1.56,0,0,0,1.6,2l14.4-.4a5.64,5.64,0,0,1,5.8,5.6v1a3.4,3.4,0,0,1-3.9,3.4l-17.9-2.5a1,1,0,0,0-1.2,1.1V558a4.15,4.15,0,0,0,3.8,4.2l31.1,3.3a9.08,9.08,0,0,0,5.8-1.3l1.1-.7a4.29,4.29,0,0,0,0-6.1s-4.2-4.1-5-4.9l-4-4.5-5.9-5.7a6.34,6.34,0,0,1-1.9-3.6l-0.8-4.7a2.6,2.6,0,0,0-2.4-1.6h0a4.59,4.59,0,0,0-3.1,1.5Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;path id=&quot;seatpost&quot; class=&quot;cls-28&quot; d=&quot;M449.5,265.8l-9.8-42.3c-2.2-9.4-9.6-23.8-19-25.9l-14.6-3.3c-2.1-.5-7.3-6.4-7.3-6.4-1-3.1,5-4.1,8.2-3.9l24.6-.5c5,0.2,9.6-1.1,12.3,3.1,0,0,7.7,12.1,10.9,24.4l13.4,53.8c0.7,2.6-1.2,2.6-3.9,3l-9.6,1.6A4.57,4.57,0,0,1,449.5,265.8Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;g id=&quot;saddle&quot;&gt;<br>
+  &lt;path id=&quot;saddle_rails&quot; data-name=&quot;saddle rails&quot; class=&quot;cls-29&quot; d=&quot;M372.8,183a18.77,18.77,0,0,1-18.7-16.9l-1.4-21.5,2.7,1.6,1.7,19.6A15.92,15.92,0,0,0,372.9,180h0.4l49.7,2.8a11.29,11.29,0,0,0,4.4-1l20.2-10.2a17.83,17.83,0,0,1,5.5-1.4l41.7-6.6,2,1.5-43.4,8.1a12.55,12.55,0,0,0-4.6,1.2l-20.2,10.2a13.42,13.42,0,0,1-5.6,1.2L373.3,183h-0.5Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;path id=&quot;saddle_leather&quot; data-name=&quot;saddle leather&quot; class=&quot;cls-30&quot; d=&quot;M513.7,162c-1.8,2.3-10.2,3.4-12.4,3.6a34.54,34.54,0,0,1-4.6.1c-2.6-.1-30.5-0.3-38.1-0.3a61.71,61.71,0,0,0-8.4,1.5l-32.2,12c-4.1,1.5-13.8.4-22.1-2.9-0.1,0-46.8-26.6-46.8-26.6a0.37,0.37,0,0,0-.3-0.1,105.91,105.91,0,0,0-11.2-1.4c-4.2-.4-5.5-6.2-1.7-8.1,0.1-.1.3-0.1,0.4-0.2l5.1-1.9c18.4-3.3,18.6-5.9,45.9-1.2,8.2,1.4,11.8,2.7,18.8,5.3,10.3,3.9,89.4,1.1,89.4,1.1h0.7c12.7,1.1,15.4,6.1,18.2,10.5C516.5,156.8,514.1,161.5,513.7,162Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;circle class=&quot;cls-31&quot; cx=&quot;472.1&quot; cy=&quot;22.36&quot; r=&quot;4.3&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;g id=&quot;seatpost_collar_lug&quot;&gt;<br>
+  &lt;path class=&quot;cls-32&quot; d=&quot;M475.7,289.7L452.1,277h-6a5.12,5.12,0,0,1-5.1-5.1v-0.4a5,5,0,0,1,4.5-5l6-.7,10.4-2.6a10.55,10.55,0,0,0,4.8-2.8l0.8-.9,0.8,3.3a3.22,3.22,0,0,0,3.2,2.5l7.4,0.8-6.7.9a4.66,4.66,0,0,0-3.6,2.6,5,5,0,0,0-.5,1.6,6.39,6.39,0,0,0,3.7,7.5l9.6,3.3a0.36,0.36,0,0,1-.1.7l-4.7.4a1.34,1.34,0,0,0-1.1,1.9l1.1,4.1A0.58,0.58,0,0,1,475.7,289.7Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;circle class=&quot;cls-17&quot; cx=&quot;416.8&quot; cy=&quot;137.66&quot; r=&quot;1.9&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;path class=&quot;cls-33&quot; d=&quot;M867.1,216l35.5,15.5a0.53,0.53,0,0,1,.3.2c11.9,11.3,21.3,19,5.2,37.3-2.8,3.1-11.7,6.5-15.9,6.8l-45.8,2.5a0.76,0.76,0,0,0-.4.1c-2,.9-2.8,2-2.9,4.4l-0.3,8a2.13,2.13,0,0,0,2.3,2.2s56.7-5.5,57.9-5.8c39.4-11.2,40.9-50.9-7.8-76.3a0.1,0.1,0,0,1-.1-0.1l-33.6-12.3c-1.6-.7-7.3.3-8.8,1.1l-3,1.4a7,7,0,0,0-4,4.7c-0.1.4-.1,0.8-0.2,1.2a7.12,7.12,0,0,0,7.8,7.3l2.3-.2C857.2,213.7,865.9,215.1,867.1,216Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;path class=&quot;cls-34&quot; d=&quot;M873.6,209.7l45.9,20c0.1,0.1.3,0.1,0.4,0.2,15.4,14.6,27.5,24.5,6.7,48.3-3.6,4.1-15.2,8.4-20.6,8.8l-59.3,3.2a0.9,0.9,0,0,0-.5.1c-2.6,1.2-3.6,2.6-3.7,5.6l-0.4,10.4a2.81,2.81,0,0,0,3,2.9s73.4-7.1,75-7.5C971,287.2,973,235.8,910,202.9c-0.1,0-.1-0.1-0.2-0.1L866.4,187c-2.1-.9-9.4.4-11.4,1.4l-3.9,1.8a9.16,9.16,0,0,0-5.1,6.1,8.75,8.75,0,0,0-.2,1.6,9.15,9.15,0,0,0,10.2,9.4l3-.3C860.7,206.8,872,208.6,873.6,209.7Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;g id=&quot;crank&quot;&gt;<br>
+  &lt;path id=&quot;ring&quot; class=&quot;cls-35&quot; d=&quot;M537.9,629.9a45.69,45.69,0,1,1,41.3-41.3A45.78,45.78,0,0,1,537.9,629.9Zm-0.7-84a38.71,38.71,0,1,0,35,35A38.84,38.84,0,0,0,537.2,545.9Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;polygon id=&quot;crank-arm-2&quot; data-name=&quot;crank-arm&quot; class=&quot;cls-36&quot; points=&quot;508.2 395.56 501.1 395.56 496.2 453.36 513.2 453.36 508.2 395.56&quot;/&gt;<br>
+  &lt;polygon id=&quot;crank-arm-3&quot; data-name=&quot;crank-arm&quot; class=&quot;cls-36&quot; points=&quot;562.6 436.16 560.4 429.36 503.9 442.56 509.2 458.76 562.6 436.16&quot;/&gt;<br>
+  &lt;polygon id=&quot;crank-arm-4&quot; data-name=&quot;crank-arm&quot; class=&quot;cls-36&quot; points=&quot;499.6 458.26 504.9 442.06 448.4 428.86 446.2 435.66 499.6 458.26&quot;/&gt;<br>
+  &lt;polygon id=&quot;crank-arm-5&quot; data-name=&quot;crank-arm&quot; class=&quot;cls-36&quot; points=&quot;510.7 456.66 497 446.76 467 496.36 472.8 500.56 510.7 456.66&quot;/&gt;<br>
+  &lt;polygon id=&quot;crank-arm-6&quot; data-name=&quot;crank-arm&quot; class=&quot;cls-36&quot; points=&quot;536.1 501.06 541.8 496.86 511.8 447.26 498.1 457.26 536.1 501.06&quot;/&gt;<br>
+  &lt;path id=&quot;chainring&quot; class=&quot;cls-37&quot; d=&quot;M603.5,584.5a1.41,1.41,0,0,1-.1,2.7l-4.9,1.3a1.44,1.44,0,0,0-.2,2.7l4.6,2.1a1.42,1.42,0,0,1-.4,2.7l-5,.7a1.39,1.39,0,0,0-.5,2.6l4.3,2.6a1.4,1.4,0,0,1-.7,2.6l-5,.1a1.42,1.42,0,0,0-.9,2.5l3.9,3.2a1.4,1.4,0,0,1-1,2.5l-5-.6a1.43,1.43,0,0,0-1.2,2.4l3.5,3.6a1.37,1.37,0,0,1-1.3,2.3l-4.9-1.2a1.42,1.42,0,0,0-1.5,2.2l3,4a1.42,1.42,0,0,1-1.6,2.2l-4.7-1.8a1.39,1.39,0,0,0-1.7,2l2.5,4.4a1.4,1.4,0,0,1-1.9,1.9l-4.4-2.4a1.44,1.44,0,0,0-2,1.8l1.9,4.7a1.42,1.42,0,0,1-2.1,1.7l-4.1-2.9a1.41,1.41,0,0,0-2.2,1.5l1.3,4.9a1.39,1.39,0,0,1-2.3,1.4l-3.7-3.4a1.44,1.44,0,0,0-2.4,1.2l0.7,5a1.42,1.42,0,0,1-2.5,1.1l-3.3-3.9a1.42,1.42,0,0,0-2.5.9l0.1,5a1.42,1.42,0,0,1-2.6.8l-2.8-4.2a1.43,1.43,0,0,0-2.6.6l-0.6,5a1.45,1.45,0,0,1-2.7.5l-2.2-4.6a1.38,1.38,0,0,0-2.6.3l-1.2,4.9a1.39,1.39,0,0,1-2.7.1l-1.6-4.8a1.44,1.44,0,0,0-2.7-.1l-1.8,4.7a1.41,1.41,0,0,1-2.7-.2l-1-5a1.39,1.39,0,0,0-2.6-.4l-2.4,4.5a1.44,1.44,0,0,1-2.7-.6l-0.4-5a1.44,1.44,0,0,0-2.6-.7l-2.9,4.1a1.44,1.44,0,0,1-2.6-.9l0.3-5a1.43,1.43,0,0,0-2.5-1l-3.4,3.7a1.39,1.39,0,0,1-2.4-1.2l0.9-5a1.4,1.4,0,0,0-2.3-1.3l-3.9,3.3a1.44,1.44,0,0,1-2.3-1.5l1.5-4.8a1.4,1.4,0,0,0-2.1-1.6l-4.2,2.8a1.39,1.39,0,0,1-2-1.8l2.1-4.6a1.39,1.39,0,0,0-1.9-1.8l-4.5,2.2a1.39,1.39,0,0,1-1.8-2l2.7-4.3a1.41,1.41,0,0,0-1.6-2.1l-4.8,1.6a1.43,1.43,0,0,1-1.6-2.2l3.2-3.9a1.45,1.45,0,0,0-1.4-2.3l-4.9,1a1.42,1.42,0,0,1-1.3-2.4l3.6-3.5a1.4,1.4,0,0,0-1.1-2.4l-5,.4a1.41,1.41,0,0,1-1-2.5l4.1-3a1.37,1.37,0,0,0-.8-2.5l-5-.2a1.38,1.38,0,0,1-.6-2.6l4.4-2.5a1.38,1.38,0,0,0-.4-2.6l-5-.9a1.41,1.41,0,0,1-.3-2.7l4.7-1.9a1.37,1.37,0,0,0-.1-2.6l-4.8-1.5a1.41,1.41,0,0,1,.1-2.7l4.9-1.3a1.37,1.37,0,0,0,.2-2.6l-4.6-2.1a1.42,1.42,0,0,1,.4-2.7l5-.7a1.39,1.39,0,0,0,.5-2.6L466,567a1.4,1.4,0,0,1,.7-2.6h5a1.42,1.42,0,0,0,.9-2.5l-3.9-3.2a1.4,1.4,0,0,1,1-2.5l5,0.6a1.44,1.44,0,0,0,1.2-2.4l-3.5-3.6a1.39,1.39,0,0,1,1.4-2.3l4.9,1.2a1.41,1.41,0,0,0,1.5-2.2l-3-4.1a1.42,1.42,0,0,1,1.6-2.2l4.7,1.8a1.39,1.39,0,0,0,1.7-2l-2.5-4.4a1.39,1.39,0,0,1,1.9-1.9l4.5,2.4a1.44,1.44,0,0,0,2-1.8l-1.9-4.7a1.42,1.42,0,0,1,2.1-1.7l4.1,2.9a1.41,1.41,0,0,0,2.2-1.5l-1.3-4.9a1.39,1.39,0,0,1,2.3-1.4l3.7,3.4a1.44,1.44,0,0,0,2.4-1.2l-0.7-5a1.42,1.42,0,0,1,2.5-1.1l3.3,3.9a1.42,1.42,0,0,0,2.5-.9l-0.1-5a1.42,1.42,0,0,1,2.6-.8l2.8,4.2a1.43,1.43,0,0,0,2.6-.6l0.6-5a1.44,1.44,0,0,1,2.7-.5l2.2,4.5a1.45,1.45,0,0,0,2.7-.3l1.2-4.9a1.39,1.39,0,0,1,2.7-.1l1.6,4.8a1.42,1.42,0,0,0,2.7,0l1.8-4.7a1.41,1.41,0,0,1,2.7.2l1,4.9a1.39,1.39,0,0,0,2.6.4l2.4-4.5a1.44,1.44,0,0,1,2.7.6l0.4,5a1.44,1.44,0,0,0,2.6.7l2.9-4.1a1.44,1.44,0,0,1,2.6.9l-0.3,5.1a1.43,1.43,0,0,0,2.5,1l3.4-3.7a1.39,1.39,0,0,1,2.4,1.2l-0.9,5a1.4,1.4,0,0,0,2.3,1.3l3.9-3.3a1.38,1.38,0,0,1,2.2,1.5l-1.5,4.8a1.4,1.4,0,0,0,2.1,1.6l4.2-2.8a1.39,1.39,0,0,1,2,1.8l-2.1,4.6a1.45,1.45,0,0,0,1.9,1.9l4.5-2.2a1.39,1.39,0,0,1,1.8,2l-2.7,4.3a1.41,1.41,0,0,0,1.6,2.1l4.8-1.6a1.38,1.38,0,0,1,1.5,2.2l-3.2,3.9a1.45,1.45,0,0,0,1.4,2.3l4.9-1a1.42,1.42,0,0,1,1.3,2.4l-3.6,3.5a1.4,1.4,0,0,0,1.1,2.4l5-.4a1.41,1.41,0,0,1,1,2.5l-4.1,3a1.37,1.37,0,0,0,.8,2.5l5,0.3a1.38,1.38,0,0,1,.6,2.6l-4.4,2.5a1.38,1.38,0,0,0,.4,2.6l5,0.9a1.41,1.41,0,0,1,.3,2.7l-4.7,1.9a1.37,1.37,0,0,0,.1,2.6Zm-16.9-.1a53,53,0,1,0-53,53A53.09,53.09,0,0,0,586.6,584.4Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;g id=&quot;chainring-bolts&quot;&gt;<br>
+  &lt;circle class=&quot;cls-38&quot; cx=&quot;449.7&quot; cy=&quot;431.56&quot; r=&quot;3.5&quot;/&gt;<br>
+  &lt;circle class=&quot;cls-38&quot; cx=&quot;559.8&quot; cy=&quot;432.36&quot; r=&quot;3.5&quot;/&gt;<br>
+  &lt;circle class=&quot;cls-38&quot; cx=&quot;504.7&quot; cy=&quot;392.06&quot; r=&quot;3.5&quot;/&gt;<br>
+  &lt;circle class=&quot;cls-38&quot; cx=&quot;538.3&quot; cy=&quot;497.56&quot; r=&quot;3.5&quot;/&gt;<br>
+  &lt;circle class=&quot;cls-38&quot; cx=&quot;499.52&quot; cy=&quot;630.8&quot; r=&quot;3.5&quot; transform=&quot;translate(-332.45 445.18) rotate(-47.94)&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;path id=&quot;bikechain&quot; class=&quot;cls-39&quot; d=&quot;M606.68,585.19C606.3,623,573.33,653.28,533,652.87a81.64,81.64,0,0,1-17.82-2.24l-259.1-66.35a44.68,44.68,0,0,1-4.37-1.33c-13.22-4.9-22.51-17-22.37-31.17,0.19-18.29,16.14-33,35.65-32.76l269.41-3C574.72,516.45,607.07,547.41,606.68,585.19Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;g id=&quot;right-arm&quot;&gt;<br>
+  &lt;polygon id=&quot;crank-arm-7&quot; data-name=&quot;crank-arm&quot; class=&quot;cls-40&quot; points=&quot;508.2 555.96 501.1 555.96 496.2 450.16 513.2 450.16 508.2 555.96&quot;/&gt;<br>
+  &lt;path id=&quot;pedal-2&quot; data-name=&quot;pedal&quot; class=&quot;cls-41&quot; d=&quot;M547.6,693.9H519.8a4,4,0,0,1-4-4h0a4,4,0,0,1,4-4h27.8a4,4,0,0,1,4,4h0A3.89,3.89,0,0,1,547.6,693.9Z&quot; transform=&quot;translate(-29 -133.94)&quot;/&gt;<br>
+  &lt;/g&gt;<br>
+  &lt;circle id=&quot;crank-bolt&quot; class=&quot;cls-42&quot; cx=&quot;504.7&quot; cy=&quot;450.46&quot; r=&quot;8.3&quot;/&gt;<br>
+  &lt;/svg&gt;<br>
+  &lt;/div&gt;<br>
+  &lt;p&gt;源码：&lt;a href=&quot;http://www.mycodes.net/&quot; target=&quot;_blank&quot;&gt;源码之家&lt;/a&gt;&lt;/p&gt;<br>
+  &lt;p&gt;GitHub：&lt;a href=&quot;https://github.com/laddzhao/&quot; target=&quot;_blank&quot;&gt;https://github.com/laddzhao&lt;/a&gt;&lt;/p&gt;<br>
+  &lt;p&gt;全部源码：&lt;/p&gt;<br>
+  &lt;/body&gt;<br>
+  &lt;/html&gt;<br>
+</p>
 </body>
 </html>
